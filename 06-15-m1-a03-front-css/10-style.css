@@ -1,0 +1,20 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    background-color: brown;
+    padding: 15px 10px;
+}
+
+p {
+    background-color: blue;
+    color: white;
+    margin: 20px 0px;
+    padding: 5px 10px;
+}
+
+a {
+ padding-left: 10px;
+}
