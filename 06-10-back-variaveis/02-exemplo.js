@@ -1,4 +1,4 @@
-//Exemplo dois
+//Exemplo dois: variáveis mutáveis
 let idade = 41;
 let alturaEmMetros = 1.74;
 

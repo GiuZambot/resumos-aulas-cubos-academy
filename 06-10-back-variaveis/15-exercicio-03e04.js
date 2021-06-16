@@ -1,4 +1,4 @@
-// Exerccício três minha solução
+// Exerccício três (let pode ser usado para declarar várias variaveis separadas por vírgula)
 let x = 10,
     y = 2,
     concat = "";
@@ -55,6 +55,7 @@ console.log("A exponenciação de " + x + " e " + y + " é " + resultado);
 // Radiaciação
 resultado = x ** (1 / y);
 console.log("A radiaciação de " + x + " e " + y + " é " + resultado + ' \n');
+
 
 //Solução Vídeo com string template
 // Somar

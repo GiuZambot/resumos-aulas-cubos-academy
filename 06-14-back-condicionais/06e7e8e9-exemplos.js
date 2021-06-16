@@ -3,7 +3,7 @@ const temIngresso = true,
     censura = 16
     taComOsPais = true;
 
-// Pde usar temIngresso === true ou só temIngresso
+// Pide usar temIngresso === true ou só temIngresso
 // Tópico 6
 console.log("Tópico 6.");
 if (temIngresso) {
@@ -18,7 +18,7 @@ if (temIngresso) {
 
 // Tópico 7
 console.log("Tópico 7.");
-if (temIngresso && idade > censura) {
+if (temIngresso && idade > censura) { // as cuas condições devem ser true
     console.log("Pode entrar")
 } else {
     console.log("Barrado");
@@ -26,7 +26,7 @@ if (temIngresso && idade > censura) {
 
 //tópico 8
 console.log("Tópico 8.");
-if (temIngresso && (idade > censura || taComOsPais)) {
+if (temIngresso && (idade > censura || taComOsPais)) { //temIngresso precisa ser true &&=e idade precisa ser maior que a censura ||=ou estar acompanhado dos pais 
     console.log("Pode entrar")
 } else {
     console.log("Barrado");
@@ -34,6 +34,6 @@ if (temIngresso && (idade > censura || taComOsPais)) {
 
 //tópico 9
 console.log("Tópico 9.");
-if (!temIngresso) {
+if (!temIngresso) { // se não for true, a condição é aceita
     console.log("Não tem ingresso")
 }

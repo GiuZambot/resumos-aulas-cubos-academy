@@ -1,4 +1,6 @@
 
+// é uma forma redusida de fazer ifs
+
 const saldo = 1;
 
 // Verificar o que usar, reais ou real.
