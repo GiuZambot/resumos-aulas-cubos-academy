@@ -2,7 +2,9 @@
 
 Meus exercícios, testes, e experimentos das aulas do curso.
 
-As pastas estão escritas com esse padrão mês/dia/tipo/tema 
+* Os diretórios dos resumos das aulas estão escritas com esse padrão mês/dia/tipo/tema 
+
+* Os diretórios com os trabalhos entregues estão no diretório exercicios-repos/=nome do repositório do trabalho=
 
 Vou melhorando os comantários conforme for sobrando tempo :)
 
