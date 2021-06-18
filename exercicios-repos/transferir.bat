@@ -2,6 +2,7 @@ robocopy . D:\reposit\resumos-aulas-cubos-academy\exercicios-repos /e /purge  /x
 cd D:\reposit\resumos-aulas-cubos-academy
 git status
 git add .
-git commit -m "Exercícios entregues"
+git commit -m "Exercicios entregues"
 git push
+
 pause
