@@ -1,0 +1,60 @@
+:root {
+    --graus-tremerD:7deg;
+    --graus-tremerE:-7deg;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vw;
+    background-color: #456392;
+    font-family: 'Mulish';
+}
+
+.table {
+    height: 100vh;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    border-radius: 50%;
+    border: 10px solid #ECF3FC;
+    height: 200px;
+    width: 200px;
+}
+
+p.arroba {
+    margin: 0px 0px 90px 0px;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+p.status {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 5px;
+}
+
+h1 {
+    margin: 15px 0px 0px 0px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.card {
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+    min-width: 600px;
+    padding: 85px 0px 85px 0px;
+    background-color: white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}

@@ -1,0 +1,123 @@
+:root {
+    --graus-tremerD:7deg;
+    --graus-tremerE:-7deg;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vw;
+    background-color: #F2F5FE;
+}
+
+.table {
+    height: 45vh;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    margin-bottom: 55px;
+    font-family: Open Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+}
+
+p.chamada {
+    margin-bottom: 0px;
+    font-family: Open Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 2px;
+    text-align: left; 
+}
+
+p.cita {
+    font-family: Merriweather;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+h2 {
+    font-family: Merriweather;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+}
+
+.btn-inscreva { 
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.35);
+    padding: 25px 0px;
+    margin: 0 auto;
+    font-family: Open Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.btn-inscreva:hover {
+    animation-name: piscar;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+@keyframes piscar {
+    0% {
+        color: white;
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.35);
+    }
+    50%
+    {   
+        color: yellow;
+        box-shadow: 5px 5px 5px rgba(255, 255, 50, 1),
+                    -5px -5px 5px rgba(255, 255, 50, 1);
+    }
+    100% {
+        color: white;
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.35);
+    }
+}
+
+.citar {
+    border-radius: 10px;
+    text-align: justify;
+    max-width: 432px;
+    min-width: 432px;
+    padding: 85px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-color: white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.newsletter {
+    color: white;
+    border-radius: 10px;
+    max-width: 320px;
+    min-width: 320px;
+    padding: 60px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background: #101439;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}

@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;    
+}
+
+body {
+    background-color: #FF7982;
+    font-family: 'Mulish';
+    min-width: 900px;
+}
+
+.wrap {
+    background-color: #F4F8FD;
+    margin: 70px 80px 0px 80px;
+    min-width: 400px;
+}
+
+/* Cabeçalho */
+
+header {
+    color: white;
+    background-image: url("./assets/background.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quadro {
+    max-width: 545px;
+    margin: 50px 0 50px 0;
+    padding: 50px;
+    background: rgba(9, 24, 63, 0.5);
+    box-shadow: 0px 14px 25px -10px rgba(9, 24, 63, 0.17);
+    border-radius: 10px;
+}
+
+h1 {
+    font-family: 'Merriweather', sans-serif;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 46px;
+    opacity: 1;
+    text-align: center;
+    margin: 50px 0 25px 0;
+}
+
+header p {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0px 0 40px 0;
+
+}
+
+.btn-comprar {
+    background-color: #FF8E4F;
+    border-radius: 50px;
+    color: white;
+    max-width: 130px;
+    padding: 15px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Main */
+
+.table {
+    height: 45vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    text-align: center;
+    max-width: 500px;
+    min-width: 500px;
+    padding: 0px;
+    background-color: white;
+    text-align: center;
+}
+
+.card h1{
+    margin: 50px 0px 25px 0px;
+    padding: 0 25% 0 25%;
+    font-size: 26px;
+    line-height: 46px;1
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 26px;
+    padding: 0 12% 0 12%;
+}
+
+.card .btn-comprar {
+    margin: 40px 0px 40px 0px;
+    color: black;
+    border: 1px solid #09183F;
+    background-color: white;
+    text-align: center;
+    margin: 40px auto;
+}
