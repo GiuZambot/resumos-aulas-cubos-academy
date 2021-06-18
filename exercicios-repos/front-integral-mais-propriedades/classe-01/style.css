@@ -1,0 +1,126 @@
+:root {
+    --graus-tremerD:7deg;
+    --graus-tremerE:-7deg;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vw;
+    background-color: #f5f5f5;
+}
+
+.table {
+    height: 45vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 40px;
+    padding: 15px 40px 15px 40px;
+}
+
+.btn-ok { 
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.35);
+    max-width: 200px;
+    padding: 15px 0;
+    margin: 0 auto;
+
+}
+
+.btn-ok:hover {
+    animation-name: piscar;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+@keyframes piscar {
+    0% {
+        color: white;
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.35);
+    }
+    50%
+    {   
+        color: yellow;
+        box-shadow: 5px 5px 5px rgba(255, 255, 50, 1),
+                    -5px -5px 5px rgba(255, 255, 50, 1);
+    }
+    100% {
+        color: white;
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.35);
+    }
+}
+
+.btn-fechar {
+    width: 30px;
+    margin-left: auto;
+    padding: 10px 10px 0px 0px;
+}
+
+.btn-fechar :hover {
+    transform-origin: center;
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    } 
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.btn-vermelho{
+    background-color: #ED6755;
+}
+
+.btn-azul{
+    background-color: #1C1B5E;
+}
+
+.card {
+    border-radius: 20px;
+    text-align: center;
+    max-width: 432px;
+    min-width: 432px;
+    padding-bottom: 70px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-color: white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.agitar:hover {
+    animation-name: agitar;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes agitar {
+    0% {
+        transform: rotate(0deg);
+    }
+    25%
+    {   
+        transform: rotate(var(--graus-tremerD));
+    }
+    75% {
+        transform: rotate(var(--graus-tremerE));;
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
