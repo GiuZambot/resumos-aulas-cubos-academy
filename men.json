@@ -1,6 +1,4 @@
 { "status": [ { "atualizado" : "20-06-2021" } ], "menu": [  
-{ "": ".gitignore"   
-}, 
 { "": ".vscode"   
 }, 
 { "": "06-09-front-html"   
@@ -17,28 +15,6 @@
 }, 
 { "": "06-17-front-props-css"   
 }, 
-{ "": "composer.json"   
-}, 
-{ "": "criar-menus.bat"   
-}, 
 { "": "exercicios-repos"   
-}, 
-{ "": "index.html"   
-}, 
-{ "": "index.php"   
-}, 
-{ "": "js.js"   
-}, 
-{ "": "lote.sh"   
-}, 
-{ "": "men.json"   
-}, 
-{ "": "menu.json"   
-}, 
-{ "": "outputfile.txt"   
-}, 
-{ "": "README.md"   
-}, 
-{ "": "style.css"   
 }, 
 ] } 
