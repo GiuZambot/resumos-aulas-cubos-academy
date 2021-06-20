@@ -1,20 +1,20 @@
 { "status": [ { "atualizado" : "20-06-2021" } ], "menu": [ 
-{ "menunome": ".vscode"   
+{ "MenuNome": ".vscode"   
 }, 
-{ "menunome": "06-09-front-html"   
+{ "MenuNome": "06-09-front-html"   
 }, 
-{ "menunome": "06-10-back-variaveis"   
+{ "MenuNome": "06-10-back-variaveis"   
 }, 
-{ "menunome": "06-11-front-elementos"   
+{ "MenuNome": "06-11-front-elementos"   
 }, 
-{ "menunome": "06-14-back-condicionais"   
+{ "MenuNome": "06-14-back-condicionais"   
 }, 
-{ "menunome": "06-15-front-css"   
+{ "MenuNome": "06-15-front-css"   
 }, 
-{ "menunome": "06-16-back-loops-arrays"   
+{ "MenuNome": "06-16-back-loops-arrays"   
 }, 
-{ "menunome": "06-17-front-props-css"   
+{ "MenuNome": "06-17-front-props-css"   
 }, 
-{ "menunome": "exercicios-repos"   
+{ "MenuNome": "exercicios-repos"   
 }, 
 ] } 
