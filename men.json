@@ -1,20 +1,4 @@
 { "status": [ { "atualizado" : "20-06-2021" } ], "menu": [  
-{ "": ".vscode"   
-}, 
-{ "": "06-09-front-html"   
-}, 
-{ "": "06-10-back-variaveis"   
-}, 
-{ "": "06-11-front-elementos"   
-}, 
-{ "": "06-14-back-condicionais"   
-}, 
-{ "": "06-15-front-css"   
-}, 
-{ "": "06-16-back-loops-arrays"   
-}, 
-{ "": "06-17-front-props-css"   
-}, 
-{ "": "exercicios-repos"   
+{ "": "%a"   
 }, 
 ] } 
