@@ -1,29 +1,11 @@
 { "status": [ { "atualizado" : "20-06-2021" } ], "menu": [ 
-0 
-0 
-0 
-0 
-0 
-0 
-0 
-0 
-0 
-0 - 9 
-{ "": ".vscode"   
-0 - 9 
-{ "": "06-09-front-html"   
-0 - 9 
-{ "": "06-10-back-variaveis"   
-0 - 9 
-{ "": "06-11-front-elementos"   
-0 - 9 
-{ "": "06-14-back-condicionais"   
-0 - 9 
-{ "": "06-15-front-css"   
-0 - 9 
-{ "": "06-16-back-loops-arrays"   
-0 - 9 
-{ "": "06-17-front-props-css"   
-0 - 9 
-{ "": "exercicios-repos"   
+{ ".vscode": ".vscode"   
+{ "06-09-front-html": "06-09-front-html"   
+{ "06-10-back-variaveis": "06-10-back-variaveis"   
+{ "06-11-front-elementos": "06-11-front-elementos"   
+{ "06-14-back-condicionais": "06-14-back-condicionais"   
+{ "06-15-front-css": "06-15-front-css"   
+{ "06-16-back-loops-arrays": "06-16-back-loops-arrays"   
+{ "06-17-front-props-css": "06-17-front-props-css"   
+{ "exercicios-repos": "exercicios-repos"   
 ] } 
