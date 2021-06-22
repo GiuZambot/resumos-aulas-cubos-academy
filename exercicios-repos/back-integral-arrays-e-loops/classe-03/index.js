@@ -1,3 +1,6 @@
+// Array
+// Achando o indice de um valor na array com for in
+
 const numeros = [54, 22, 14, 87, 10, 284, 100];
 
 // Com indexOf
