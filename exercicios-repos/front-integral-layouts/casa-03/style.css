@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+header {
+    color:white;
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header img {
+
+}
+
+main img {
+    width: 100%;
+}
+
+header ul {
+    max-width: 500px;
+    min-width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+}
+
+header li {
+    font-size: 18px;
+    line-height: 25px;
+    list-style: none;
+}
+
+header a {
+    background-color: white;
+    text-decoration: none;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 55px;       
+}
+
+/* hero section */
+
+.hero {
+    color: white;
+    outline: 1px solid red;
+    height: 600px;
+    width: 100%;
+    background-image: url("./assets/image-header.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 55px;
+    font-weight: 900;
+    margin-bottom: 50px;
+    
+}
+
+
+/* Sessões */
+
+
+
+footer {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+}
+
+footer div {
+    background-color: #90D4C6;
+    width: 100%;
+    display: flex;
+    height: 50%;
+    align-items: center;
+    justify-content: stretch;
+}
+
+footer img {
+    width: 25%;
+    flex-basis: 50px;
+    object-fit: scale-down;
+}
+
+.final {
+    color: #2C7566;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.final div {
+    font-size: 18px;
+    margin: 40px 0 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.final ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.final ul li {
+    padding:0 20px;
+    list-style: none;
+}

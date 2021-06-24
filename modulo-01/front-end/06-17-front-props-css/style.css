@@ -1,0 +1,49 @@
+body{
+  text-align: center;
+  /* background-color: black; */
+  background-image: url("https://unsplash.it/200"),url("https://unsplash.it/201");
+  background-position:0px 0px, 200px 200px;
+  background-repeat: no-repeat;
+  background-size: 300px;
+}
+
+h1 {
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+h1,
+p,
+a {
+  font-family: "Roboto Mono", monospace;
+}
+
+ul{
+  list-style: lower-roman;
+}
+
+img{
+  opacity: 0.3;
+  border-radius: 50%;
+}
+
+.card{
+  width: 250px;
+  border: 1px solid black;
+  padding: 10px;
+  box-shadow: 10px 10px black, -10px -10px blue;
+  background-color: azure;
+  margin: auto;
+}
+
+.super{
+  font-size: 100vw;
+}

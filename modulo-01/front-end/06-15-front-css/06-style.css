@@ -1,0 +1,10 @@
+/* O que não tiver definido é erdado do elemento pai
+a div ficará vermelha, herdado de body */
+
+h1 {
+    color: aqua;
+}
+
+body {
+    color: red;
+}

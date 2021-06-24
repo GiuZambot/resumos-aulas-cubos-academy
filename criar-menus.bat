@@ -15,8 +15,6 @@ for /d %%a in (*) do (
     ECHO }, >> %tmp%
 )
 
-
-
 setlocal enabledelayedexpansion
 set line=0
 

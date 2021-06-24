@@ -2,9 +2,11 @@
 
 Meus exercícios, testes, e experimentos das aulas do curso.
 
-* Os diretórios dos resumos das aulas estão escritas com esse padrão mês/dia/tipo/tema 
+* Os diretórios dos resumos das aulas estão divididos por módulos, back e front end, escritos com esse padrão mês/dia/tipo/tema 
 
 * Os diretórios com os trabalhos entregues estão no diretório exercicios-repos/=nome do repositório do trabalho=
+
+* Os demais arquivos são para o site dos resumos.
 
 Vou melhorando os comantários conforme for sobrando tempo :)
 
