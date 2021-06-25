@@ -8,24 +8,26 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    font-family: 'Fraunces', sans-serif;
+}
+
+a, a:visited {
+    color: inherit;
+    text-decoration: none;
 }
 
 header {
     color:white;
     width: 100%;
-    padding: 40px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-family: 'Barlow', sans-serif;
 
 }
 
-header img {
-
-}
-
-main img {
-    width: 100%;
+header img, header nav {
+    padding: 30px 20px;
 }
 
 header ul {
@@ -34,8 +36,6 @@ header ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    
 }
 
 header li {
@@ -45,8 +45,8 @@ header li {
 }
 
 header a {
+    color: black;
     background-color: white;
-    text-decoration: none;
     border-radius: 40px;
     display: flex;
     align-items: center;
@@ -55,7 +55,7 @@ header a {
     height: 55px;       
 }
 
-/* hero section */
+/* hero section ========================== */
 
 .hero {
     color: white;
@@ -73,14 +73,82 @@ header a {
 .hero h1 {
     font-size: 55px;
     font-weight: 900;
-    margin-bottom: 50px;
-    
+    margin: 40px 0px;
+    letter-spacing: 8px;    
+
 }
 
 
-/* Sessões */
+/* Sessões =========================== */
+
+.sessao {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.sessao div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.normal div {
+    width: 64%;
+    margin: auto;
+}
+
+.sessao img {
+    width: 100%;
+}
+
+.sessao h1 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 2.5em;
+    letter-spacing: -0.3px;
+    color: #24303E;
+
+}
+
+.sessao p {
+    font-family: 'Barlow', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    color: #808397;
+    margin: 35px 0;
+}
+
+.sessao a {
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    color: #24303E;
+}
+
+.join div {
+    height: 580px;
+    position: absolute;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.join p {
+    width: 50%;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: center;
+    color: #19536C;
+}
 
 
+
+
+/* Footer ============================= */
 
 footer {
     width: 100%;
@@ -109,6 +177,7 @@ footer img {
 .final {
     color: #2C7566;
     width: 100%;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -123,6 +192,10 @@ footer img {
     align-items: center;
 }
 
+.final nav {
+    padding: 20px;
+}
+
 .final ul {
     display: flex;
     justify-content: center;
@@ -130,6 +203,6 @@ footer img {
 }
 
 .final ul li {
-    padding:0 20px;
+    padding:0 25px;
     list-style: none;
 }
