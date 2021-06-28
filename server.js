@@ -46,7 +46,7 @@ let port = process.env.PORT | 5500;
 // const listener = server.listen(port, () => {
 //     console.log(`listening on http://localhost:${port}/`);
 // });
-
-http.listen(port, () => {
+const host = process.env.YOUR_HOST || 'localhost';
+http.listen(port, host, () => {
     console.log(`listening on http://localhost:${port}/`);
 });
