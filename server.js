@@ -1,5 +1,4 @@
 const http = require('http');
-const PATH = require('path');
 const dirTree = require("directory-tree");
 const express = require("express");
 const app = express();
@@ -32,23 +31,14 @@ io.on('connect', socket => {
     // socket.emit('storedComments', commentObjectArray);  
 
     // Listen pelos comentários
-    socket.on('comment', (data) => {
-        // executa função no cliente
-        socket.broadcast.emit('remoteComment', data);
-    });
+    // socket.on('comment', (data) => {
+    //     // executa função no cliente
+    //     socket.broadcast.emit('remoteComment', data);
+    // });
 });
 
 // port process.env.PORT
-const port = process.env.PORT | 5500;
+let port = process.env.PORT | 5500;
 const listener = server.listen(port, () => {
-    console.log("Your app is listening on port " + listener.address().port);
+    console.log(`listening on http://localhost:${port}/`);
 });
-
-
-// const tree = dirTree("/", { extensions: /\.html/ });
-
-// const filteredTree = dirTree("/some/path", { exclude: /some_path_to_exclude/ });
-
-
-
-// console.log("tree: " + tree);
