@@ -1,9 +1,13 @@
-const http = require('http');
+// const http = require('http');
 const dirTree = require("directory-tree");
+// const express = require("express");
+// const app = express();
+// const server = http.createServer(app);
+// const io = require('socket.io')(server);
 const express = require("express");
-const app = express();
-const server = http.createServer(app);
-const io = require('socket.io')(server);
+const app = require('express')();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
 
 app.use(express.static("www"));
 
@@ -39,6 +43,10 @@ io.on('connect', socket => {
 
 // port process.env.PORT
 let port = process.env.PORT | 5500;
-const listener = server.listen(port, () => {
+// const listener = server.listen(port, () => {
+//     console.log(`listening on http://localhost:${port}/`);
+// });
+
+http.listen(port, () => {
     console.log(`listening on http://localhost:${port}/`);
 });
