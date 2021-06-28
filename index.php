@@ -1,19 +1,10 @@
 <?php
-
-include_once("index.html");
-
+// Esse arquivo é só para o Heroku servir hmtl puro, não é necessário para uso com o node
 $rdi = new RecursiveDirectoryIterator(".");
 $rii = new RecursiveIteratorIterator($rdi);
 $ri = new RegexIterator($rii, "/^.+.html$/i", RecursiveRegexIterator::GET_MATCH);
 $ri->replacement = 'menu:$1';
 $i = iterator_to_array($ri);
-
-$arrayJson = array(
-    "nome"  => "joao",
-    "idade" => 35
-  );
-
-  
 
 function getFileList($directory, $recursive = false)
  {
@@ -57,12 +48,13 @@ function getFileList($directory, $recursive = false)
  }
 
 
-
-
-
+$arrayJson = array(
+    "nome"  => "joao",
+    "idade" => 35
+);
+include_once("index.html");
 ?>
-
 <script>
-// const data = <?php echo json_encode($arrayJson) ?>;
-// console.log(data);
+    const data = <?php echo json_encode($arrayJson) ?>;
+    console.log(data);
 </script>

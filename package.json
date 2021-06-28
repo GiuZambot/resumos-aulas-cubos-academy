@@ -1,0 +1,36 @@
+{
+  "name": "resumos-aulas-cubos-academy",
+  "version": "0.0.1",
+  "description": "Site de resumos das aulas Cubos Academy",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GiuZambot/resumos-aulas-cubos-academy.git"
+  },
+  "keywords": [
+    "nodejs",
+    "html",
+    "css",
+    "js",
+    "postgres",
+    "react"
+  ],
+  "author": "Giu Zambot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GiuZambot/resumos-aulas-cubos-academy/issues"
+  },
+  "homepage": "https://github.com/GiuZambot/resumos-aulas-cubos-academy#readme",
+  "dependencies": {
+    "directory-tree": "^2.2.9",
+    "express": "^4.17.1",
+    "socket.io": "^4.1.2"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}
