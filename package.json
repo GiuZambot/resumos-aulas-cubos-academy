@@ -4,7 +4,8 @@
   "description": "Site de resumos das aulas Cubos Academy",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,6 @@
     "socket.io": "^4.1.2"
   },
   "engines": {
-    "node": "14.x"
+    "node": "14.17.0"
   }
 }
