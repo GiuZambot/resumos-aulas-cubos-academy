@@ -39,7 +39,8 @@ io.on('connect', socket => {
 });
 
 // port process.env.PORT
-const listener = server.listen(5500, () => {
+const port = process.env.PORT | 5500;
+const listener = server.listen(port, () => {
     console.log("Your app is listening on port " + listener.address().port);
 });
 
