@@ -38,7 +38,7 @@ const data = dirTree('./', { extensions: /\.html/, exclude: /(.vscode|.git|www|g
 
 io.on('connect', socket => {
     console.log('Client connected');
-    io.emit('menu', data);
+    // io.emit('menu', data);
     // socket.emit('menu', data);
     // de um db
     // socket.emit('storedComments', commentObjectArray);  
@@ -48,8 +48,13 @@ io.on('connect', socket => {
     //     // executa função no cliente
     //     socket.broadcast.emit('remoteComment', data);
     // });
-});
 
+    socket.on('pullMenu', () => {
+        // enviar menu
+        socket.emit('menu', data);
+    });
+
+});
 
 // port process.env.PORT
 let port = process.env.PORT | 5500;

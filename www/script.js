@@ -1,5 +1,10 @@
-String.prototype.toCapitalize = function () {
-    return this.charAt(0).toUpperCase() + this.substr(1);
+const RS = document.getElementById('respostas');
+let dataMenu = null;
+let dataMenuNow = null;
+let MenuNow = [];
+
+String.prototype.toCap = function () {
+    return this.split(" ").map(x => x.charAt(0).toUpperCase() + x.slice(1)).join(" ");
 }
 
 function createNode(element) {
@@ -9,11 +14,6 @@ function createNode(element) {
 function append(parent, el) {
     return parent.appendChild(el);
 }
-
-const RS = document.getElementById('respostas');
-let dataMenu = null;
-let dataMenuNow = null;
-let MenuNow = [];
 
 function ver(path) {
     const target = document.getElementById('visual');
@@ -36,7 +36,7 @@ function criaMenu(itens) {
 
     for (let i = 0; i < itens.length; i++) {
         if (itens[i].hasOwnProperty("name")) {
-            const titulo = itens[i].name.replace(/-/ig, " ").toCapitalize();
+            const titulo = itens[i].name.replace(/-/ig, " ").toCap();
             let btn = createNode('button');
             btn.className = 'btn';
             btn.innerHTML = titulo;
@@ -91,3 +91,5 @@ socket.on('menu', menu);
 //     timestamp: domComment.querySelectorAll('span')[0].innerText,
 //     comment: domComment.querySelectorAll('p')[0].innerText
 // });
+
+window.onload = () => socket.emit('pullMenu');
