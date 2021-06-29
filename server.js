@@ -5,10 +5,7 @@ const http = require('http').Server(app);
 const io = require('socket.io')(http);
 
 app.use(express.static('www'));
-
 app.use(express.static('./'))
-
-app.use(express.static(__dirname + 'resumos-aulas-cubos-academy'));
 
 app.get("/", (request, response) => {
     response.sendFile(__dirname + "/www/index.html");

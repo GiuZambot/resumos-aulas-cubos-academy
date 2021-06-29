@@ -12,20 +12,13 @@ body {
     justify-content: center;
 }
 
-iframe {
-    width: 95%;
-    display:block;
-    margin-top: 20px;
-    /* padding: 20px; */
-    background-color: antiquewhite;
-    border-radius: 15px;
-}
 
 /* box com vídeo de fundo ================================================= */
 
-#box {
-    width: 70%;
+.box {
+    width: 80%;
     padding: 20px;
+    margin: 10px 0px;
     background-color: antiquewhite;
     border-radius: 15px;
     height: min-content;
@@ -34,7 +27,13 @@ iframe {
     position: relative;
 }
 
-#box > button {
+.box iframe {
+    width: 100%;
+    border-radius: 15px;
+    position: relative;
+}
+
+.box > button {
     margin: 10px;
     padding: 5px;
     background-color: rgba(148, 0, 211, 0.5);
@@ -42,24 +41,19 @@ iframe {
     border: 1px dashed gray;
 }
 
-#box > .video {
-    border: 1px solid gray;
-    border-radius: 25px;
+.box > .ops {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
     min-width: 100%;
-    min-height: 100%;
     display: flex;
-    align-items: stretch;
-    justify-content: stretch;
-    overflow: hidden;
+    align-items: flex-start;
+    justify-content: flex-end;
 }
 
-#box > .video > video {
-    width: 100%;
-    object-fit: cover;
+.box > .ops > button {
+    margin: 7px;
+    padding: 2px;
 }
 
 /* Pedguntas e respostas ================================================ */

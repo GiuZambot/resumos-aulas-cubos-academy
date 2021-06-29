@@ -10,7 +10,7 @@
 
   <body id="body">
 
-    <div id="box">
+    <div class="box">
       <h1 id="pergunta">Resumo de aulas</h1>
       <p class="atualizado">Atualizado 27/06/2021</p>
       <div id="respostas">
@@ -26,10 +26,15 @@
       <p></p>
     </div>
 
+    <div class="box">
+      <iframe id="visual" src="iframe.html" frameborder="0" allowfullscreen></iframe>
+      <div class="ops">
+        <button>Tela Cheia</button>
+      </div>
+    </div>
 
     <script type="module" src="/socket.io/socket.io.js"></script>
     <script type="module" src="script.js" defer></script>
-    <iframe id="visual" src="iframe.html" frameborder="0" allowfullscreen></iframe>
   </body>
 
 </html>

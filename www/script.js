@@ -35,7 +35,7 @@ function autoResize(id) {
 function criaMenu(itens) {
 
     for (let i = 0; i < itens.length; i++) {
-        if (itens[i].hasOwnProperty("name")) {
+        if (itens[i].hasOwnProperty("name") && itens[i].size > 0) {
             const titulo = itens[i].name.replace(/-/ig, " ").toCap();
             let btn = createNode('button');
             btn.className = 'btn';
