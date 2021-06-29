@@ -7,8 +7,18 @@ body {
     min-height: 100vh;
     background: linear-gradient(0, #cbc7f3, #202150);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+iframe {
+    width: 95%;
+    display:block;
+    margin-top: 20px;
+    /* padding: 20px; */
+    background-color: antiquewhite;
+    border-radius: 15px;
 }
 
 /* box com vídeo de fundo ================================================= */

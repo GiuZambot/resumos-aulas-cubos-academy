@@ -1,18 +1,21 @@
-// const http = require('http');
 const dirTree = require("directory-tree");
-// const express = require("express");
-// const app = express();
-// const server = http.createServer(app);
-// const io = require('socket.io')(server);
 const express = require("express");
 const app = require('express')();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 
-app.use(express.static("www"));
+app.use(express.static('www'));
+
+app.use(express.static('./'))
+
+app.use(express.static(__dirname + 'resumos-aulas-cubos-academy'));
 
 app.get("/", (request, response) => {
     response.sendFile(__dirname + "/www/index.html");
+});
+
+app.get(/i/, function (req, res) {
+    res.sendFile('/i/');
 });
 
 // menus do json estático

@@ -1,4 +1,4 @@
-robocopy . D:\reposit\resumos-aulas-cubos-academy\exercicios-repos /e /purge  /xd .git /xd .vscode /xf .gitignore
+robocopy . D:\reposit\resumos-aulas-cubos-academy\atividades-entregues /e /purge  /xd .git /xd .vscode /xf .gitignore
 cd D:\reposit\resumos-aulas-cubos-academy
 git status
 git add .

@@ -16,8 +16,20 @@ let dataMenuNow = null;
 let MenuNow = [];
 
 function ver(path) {
-    path = "http://localhost:5500/modulo-01/front-end/06-09-front-html/";
-    const target = document.getElementById('visual').src = path;
+    const target = document.getElementById('visual');
+    target.src = path;
+    target.onload = () => autoResize('visual');
+}
+
+function autoResize(id) {
+    let newheight;
+    let newwidth;
+    if (document.getElementById) {
+        newheight = document.getElementById(id).contentWindow.document.body.scrollHeight;
+        newwidth = document.getElementById(id).contentWindow.document.body.scrollWidth;
+    }
+    document.getElementById(id).height = (newheight) + "px";
+    document.getElementById(id).width = (newwidth) + "px";
 }
 
 function criaMenu(itens) {
