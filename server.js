@@ -21,6 +21,11 @@ app.get("/", (request, response) => {
 //menu dinâmico
 const data = dirTree('./', { extensions: /\.html/, exclude: /(.vscode|.git|www|games|node_modules)$/ });
 
+// const lineReader = require('line-reader');
+// lineReader.eachLine('./teste.txt', function (line, last) {
+//     console.log(line);
+//     return false;
+// });
 
 // fetch('http://localhost:5500/www/menu.json')
 //     .then(res => data = res.json());
@@ -30,7 +35,8 @@ const data = dirTree('./', { extensions: /\.html/, exclude: /(.vscode|.git|www|g
 
 io.on('connect', socket => {
     console.log('Client connected');
-    socket.emit('menu', data);
+    io.emit('menu', data);
+    // socket.emit('menu', data);
     // de um db
     // socket.emit('storedComments', commentObjectArray);  
 
@@ -40,6 +46,7 @@ io.on('connect', socket => {
     //     socket.broadcast.emit('remoteComment', data);
     // });
 });
+
 
 // port process.env.PORT
 let port = process.env.PORT | 5500;
