@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/GiuZambot/resumos-aulas-cubos-academy#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "directory-tree": "^2.2.9",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
