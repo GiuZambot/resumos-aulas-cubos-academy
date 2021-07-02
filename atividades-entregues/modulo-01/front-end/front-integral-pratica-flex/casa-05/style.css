@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background-color: #E5E5E5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins',sans-serif;
+}
+
+.card1, .card2 {
+    background-color: white;
+    padding: 30px 30px 0px 30px;
+    box-shadow: 0px 16px 45px -15px rgba(2, 5, 132, 0.25);
+    border-radius: 10px;
+}
+
+.card1 .profile, .card2 .profile {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 8px;
+    border: 0.5px solid #EFEFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 8px 22.5px -7.5px rgba(2, 5, 132, 0.2);
+}
+
+/* card 1 ======================================= */
+
+.card1 {
+    width: 580px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card1 div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.card1 button {
+    background-color: #202142;
+    background-image: url("./assets/icone-usuario.svg");
+    background-position: 24px center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 15px 30px 15px 60px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-left: auto;
+}
+
+.card1 div div {
+    margin-top: 20px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.card1 div div h1 {
+    font-family: 'Merriweather';
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 28px;
+    color: #202142;
+}
+
+.card1 div div h2 {
+    font-size: 16px;
+    line-height: 24px;
+    color: #202142;
+}
+
+.card1 div img {
+    width: 32%;
+    border-radius: 10px;
+}
+
+/* card 2 ========================== */
+
+.card2 {
+    width: 70%;
+    display: flex;
+    padding-bottom: 30px;
+}
+
+.card2 div {
+    margin: 15px 0px 0px 20px;
+    flex-grow: 2;
+}
+
+.card2 div h1 {
+    font-family: 'Merriweather';
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 28px;
+    color: #202142;
+    
+}
+
+.card2 div h2 {
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #202142;
+}
+
+.card2 button {
+    color: #202142;
+    background-color: white;
+    border: 1px solid #A4A4CB;
+    background-image: url("./assets/./icone-usu-dark.svg");
+    background-position: 24px center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 15px 30px 15px 60px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 20px;
+}
+
+.card2 img {
+    width: 20%;
+    margin-left: 20px;
+}
+

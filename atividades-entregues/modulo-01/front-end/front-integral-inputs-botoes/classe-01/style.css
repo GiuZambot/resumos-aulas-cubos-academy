@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #CED5EC;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  color: white;
+  background-color: #5F82FF;
+  border: none;
+  padding: 45px 0px;
+  width: 100%;
+  font-size: 18px;
+  line-height: 24px;
+  transition: .2s cubic-bezier(.3,0,.5,1);
+  transition-property: color, background-color, box-shadow;
+}
+
+button:hover {
+  background-color: #093DF3;
+  box-shadow: 0px 7px 24px rgba(9, 61, 243, 0.3);
+}
+
+h1 {
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  align-self: center;
+  width: 250px;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+label {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+input {
+  width: 100%;
+  padding: 25px;
+  font-size: 16px;
+  line-height: 22px;
+  border: 1px solid #CED5EC;
+  border-radius: 5px;
+}
+
+input:focus {
+  border: 1px solid #5F82FF;
+  outline: none;
+}
+
+.box {
+  background-color: white;
+  width: 39%;
+  min-height: min-content;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.box p {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 45px;
+}
+
+.box .final {
+  text-align: center;
+  padding: 0px 15px;
+  margin: 50px 0px 25px 0px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.box div {
+  margin-top: 20px;
+  flex-basis: 48%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box div div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+#cardnum {
+  width: 100%;
+}

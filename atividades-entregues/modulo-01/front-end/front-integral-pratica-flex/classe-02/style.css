@@ -1,0 +1,121 @@
+*, *:visited {
+    color: black;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+
+}
+
+body {
+    background-color:blanchedalmond;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+h1 {
+    
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #212D59;
+}
+
+.btn-fechar {
+    align-self: flex-end;
+    margin: -32px -22px 0 0;
+}
+
+.card1 {
+    background-color: white;
+    border-radius: 15px;
+    padding: 55px;
+    min-height: 33vh;
+    flex-basis: 26%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.card1 p {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #9097AD;
+}
+
+.card1 a {
+    color: white;
+    font-size: 16px;
+    padding: 20px 80px;
+    background-color: #2F2D2C;
+    border-radius: 5px;
+
+}
+
+.card1 div {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card1 div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.card2 {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    min-height: 25vh;
+    display: flex;
+    flex-basis: 20%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card2 div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.card2 p {
+    color: #212D59;
+    text-align: center;
+    width: 80%;
+    padding: 20px;
+}
+
+.card2 div p {
+    color: #212d5987;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.card2 a {
+    color: white;
+    font-size: 16px;
+    padding: 20px 45px;
+    background-color: #2F2D2C;
+    border-radius: 5px;
+
+}
+  
+  
