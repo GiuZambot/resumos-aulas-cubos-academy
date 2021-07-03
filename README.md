@@ -1,10 +1,12 @@
 # Resumos de Aulas Cubos Academy (Arquivos não oficiais)
 
-Meus exercícios, testes, e experimentos das aulas do curso.
+Exercícios, testes, e experimentos das aulas do curso.
+
+* O script do site pega automaticamente os diretórios que contem algum arquivo html, assim pode ser usado para servir seu site com a estrutura de diretórios que preferir.
 
 * Os diretórios dos resumos das aulas estão divididos por módulos, back e front end, escritos com esse padrão mês/dia/tipo/tema 
 
-* Os diretórios com os trabalhos entregues estão no diretório exercicios-repos/=nome do repositório do trabalho=
+* Os diretórios com os trabalhos entregues estão no diretório exercicios-entregues / = modulo= / =tipo= / =nome do repositório do trabalho=
 
 * Os demais arquivos são para o site dos resumos.
 
