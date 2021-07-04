@@ -16,27 +16,14 @@ function append(parent, el) {
 }
 
 function ver(path) {
-    const target = document.getElementById('visual');
-    target.src = path;
-    target.onload = () => autoResize('visual');
-}
-
-function autoResize(id) {
-    let newheight;
-    let newwidth;
-    if (document.getElementById) {
-        newheight = document.getElementById(id).contentWindow.document.body.scrollHeight;
-        newwidth = document.getElementById(id).contentWindow.document.body.scrollWidth;
-    }
-    document.getElementById(id).height = (newheight) + "px";
-    document.getElementById(id).width = (newwidth) + "px";
+    window.open(path, "_blank");
 }
 
 function criaMenu(itens) {
 
     for (let i = 0; i < itens.length; i++) {
         if (itens[i].hasOwnProperty("name") && itens[i].size > 0) {
-            const titulo = itens[i].name.replace(/-/ig, " ").toCap();
+            const titulo = itens[i].name.replace(/.html/ig, "").replace(/-/ig, " ").toCap();
             let btn = createNode('button');
             btn.className = 'btn';
             btn.innerHTML = titulo;
