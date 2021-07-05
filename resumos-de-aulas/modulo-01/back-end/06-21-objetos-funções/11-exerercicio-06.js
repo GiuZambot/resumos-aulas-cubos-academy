@@ -1,4 +1,4 @@
-// Exercício 5 - Refatorado
+// Exercício 5 - Refatorado, funções em objetos
 
 const pessoa = {
     nome: "Giuliana",

@@ -1957,15 +1957,14 @@ function eval1(y) {
 	var script = document.createElement('script');
 	script.type = "text/javascript";
 	script.text = "{console.clear();" + y + "}";
+	document.getElementById("code").value = script.text;
 	document.getElementsByTagName('head')[0].appendChild(script);
 	document.head.removeChild(document.head.lastChild);
 }
 
-function evalFix() {
-	const y = "console.clear();" + document.getElementById("code").value;
-	var script = document.createElement('script');
-	script.type = "text/javascript";
-	script.text = y;
-	document.getElementsByTagName('head')[0].appendChild(script);
-	document.head.removeChild(document.head.lastChild);
+const evalBtn = document.getElementById("eval");
+if (evalBtn) {
+	evalBtn.addEventListener('click', function () {
+		eval1(document.getElementById("code").value);
+	});
 }

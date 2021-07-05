@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Objetos Javascript</title>
+        <link rel="stylesheet" type="text/css" href="../../../../www/style.css">
+        <link rel="stylesheet" type="text/css" href="../../../../www/prism.css">
+    </head>
+
+    <body>
+
+        <div class="box">
+            <h3>Execute cada snippet clicando no botão "copiar e executar", verifique no console os resultados, caso queira, copie o código no editor abaixo para alterar o código.</h3>
+            <textarea name="" id="code" cols="25" rows="10" placeholder="Cole ou digite o código aqui, depois clique em Executar."></textarea>
+            <button id="eval">Executar o código acima.</button>
+
+            <pre><code class="language-js">
+// Criação de Objetos
+
+const objPessoa = { //Sempre começa com chaves
+    nome: "Giu", // o conjunto nome:"giu" é um membro ou propriedade do objeto, são separadas por virgula
+    idade: 41, // a primeira parte é a chave ou nome da propriedade
+    altura: 1.74, // a parte da direita é o valor da propriedade
+    temCNH: true,
+    apelidos: ["Giu", "Giulia", "Giuli"] // na ultima propriedade, não se usa virgula
+};
+
+console.log(objPessoa);
+</code></pre>
+
+            <pre><code class="language-js">
+// Acessando Objetos
+
+const objPessoa = {
+    nome: "Giu",
+    idade: 41,
+    altura: 1.74,
+    temCNH: true,
+    apelidos: ["Giu", "Giulia", "Giuli"]
+};
+
+const varBusca = "nome";
+
+console.log(`Bem-vinda ${objPessoa.nome}`); // acessado com . e a chave
+console.log(`Bem-vinda ${objPessoa["nome"]}`); //também pode com a chave
+console.log(`Bem-vinda ${objPessoa[varBusca]}`); // ou usando uma variável
+</code></pre>
+
+            <pre><code class="language-js">
+// Extendendo um objeto
+const objPessoa = {
+    nome: "Giu",
+    idade: 41,
+    altura: 1.74,
+    temCNH: true,
+    apelidos: ["Giu", "Giulia", "Giuli"]
+};
+
+const cnh = objPessoa.temCNH ? "tem" : "não tem";
+
+let apelidos = "";
+for (const i of objPessoa.apelidos) {
+    apelidos += `- ${i}\n`;
+}
+
+console.log(`${objPessoa.nome} tem ${objPessoa.idade}, ${objPessoa.altura}cm de altura, ${cnh} CNH e os seguintes apelidos:\n${apelidos}`);
+</code></pre>
+
+            <pre><code class="language-js">
+// Mais formas de manipular o objeto
+const objPessoa = {
+    nome: "Giu",
+    idade: 41,
+    altura: 1.74,
+    temCNH: true,
+    apelidos: ["Giu", "Giulia", "Giuli"]
+};
+
+objPessoa.peso = 70;
+objPessoa.nome = "Giuliana"
+objPessoa["idade"] = 21;
+const prop = "altura";
+objPessoa[prop] = 1.70;
+objPessoa.apelidos[0] = "Giuza";
+objPessoa.apelidos.push("Giugiu", "Gi");
+objPessoa.teste = "Será apagado";
+delete objPessoa.teste;
+
+const cnh = objPessoa.temCNH ? "tem" : "não tem";
+let apelidos = "";
+for (const i of objPessoa.apelidos) {
+    apelidos += `- ${i}\n`;
+}
+
+console.log(`${objPessoa.nome} tem ${objPessoa.idade}, ${objPessoa.altura}cm de altura, ${objPessoa.peso}kg, ${cnh} CNH e os seguintes apelidos:\n${apelidos}`);
+
+// Deletando uma propriedade. Cuidado, essa operação é mais lenta do que setar para null, "", 0 etc
+objPessoa.teste = "Será apagado";
+delete objPessoa.teste;
+
+console.log(objPessoa.teste);
+</code></pre>
+
+            <pre><code class="language-js">
+// Objeto dentro de objeto
+const carro = {
+    marca: "Toyota",
+    modelo: "Etios",
+    ano: 2017,
+    potencia: 800,
+};
+
+const objPessoa = {
+    nome: "Giu",
+    idade: 41,
+    altura: 1.74,
+    temCNH: true,
+    apelidos: ["Giu", "Giulia", "Giuli"],
+    carro // coloca o valor como uma variáva assim carro: carro, pode ser usado dessas formas ou digitando o objeto diretamente
+};
+
+console.log(objPessoa);
+</code></pre>
+
+            <pre><code class="language-js">
+// Exercíicio: pratica usual de um objeto
+const cartaoConsumo = {
+    nome: "Giuliana",
+    idade: 41,
+    prodConsumo: [
+        {
+            nome: "Batata Frita",
+            precoUnit: 900,
+            qtdade: 1
+        },
+        {
+            nome: "Coca",
+            precoUnit: 500,
+            qtdade: 2
+        },
+        {
+            nome: "X-Tudo",
+            precoUnit: 1200,
+            qtdade: 2
+        }
+    ]
+}
+
+function toReais(x) {
+    return "R$ " + (x / 100).toFixed(2);
+}
+
+let valTotal = 0;
+let nota = "";
+const produtos = cartaoConsumo.prodConsumo;
+for (let i = 0; i < produtos.length; i++) {
+    valTotal += produtos[i].precoUnit * produtos[i].qtdade;
+
+    nota += `\n${produtos[i].qtdade} ${produtos[i].nome}: ${toReais(produtos[i].precoUnit)} cada, total ${toReais(produtos[i].precoUnit * produtos[i].qtdade)}`;
+}
+
+const msgCaixa = `Olá ${cartaoConsumo.nome}, seu total a pagar é de R$ ${toReais(valTotal)}.\nSeus produtos foram:${nota}`;
+console.log(msgCaixa);
+</code></pre>
+        </div>
+        <script type="module" src="../../../../www/prism.js" defer></script>
+    </body>
+
+</html>

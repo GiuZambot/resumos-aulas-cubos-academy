@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Funções Javascript</title>
+        <link rel="stylesheet" type="text/css" href="../../../../www/style.css">
+        <link rel="stylesheet" type="text/css" href="../../../../www/prism.css">
+    </head>
+
+    <body>
+
+        <div class="box">
+            <h3>Execute cada snippet clicando no botão "copiar e executar", verifique no console os resultados, caso queira, copie o código no editor abaixo para alterar o código.</h3>
+            <textarea name="" id="code" cols="25" rows="10" placeholder="Cole ou digite o código aqui, depois clique em Executar."></textarea>
+            <button id="eval">Executar o código acima.</button>
+
+            <pre><code class="language-js">
+// Funções
+function logarOla() {
+    console.log("Olá");
+}
+
+logarOla();
+
+function olaPara(pessoa) {
+    console.log(`Olá ${pessoa}!`);
+}
+
+olaPara("José");
+
+function detectarMaiorIdade(nome, idade) {
+    if (idade > 18) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+let nome = "João";
+let idade = 19;
+
+let ehMaiorDeIdade = detectarMaiorIdade(nome, idade);
+
+console.log(ehMaiorDeIdade);
+</code></pre>
+
+            <pre><code class="language-js">
+// Exercício, uma função para apresentar uma pessoa, usando um objeto como fonte de dados.
+function apresenta(pessoa) {
+    let trataG = "uma", trataI = "jovem", trataA = "a";
+
+    if (pessoa.genero === "feminino") {
+        trataG = "uma";
+        trataA = "a"
+    } else {
+        trataG = "um";
+        trataA = "o";
+    }
+
+    if (pessoa.idade < 25) {
+        trataI = "jovem";
+    } else if (pessoa.idade < 65) {
+        trataI = "adult" + trataA;
+    } else {
+        trataI = "idos" + trataA;
+    }
+
+    console.log(`Olá! Meu nome é ${pessoa.nome}, sou ${trataG} ${trataI} de ${pessoa.idade} anos, ${pessoa.altura} de altura e sou ${pessoa.profissao}.`);
+}
+
+
+const pessoa = {
+    nome: "Giuliana",
+    genero: "feminino",
+    idade: 41,
+    profissao: "Programadora",
+    altura: 1.74
+}
+
+apresenta(pessoa);
+
+const pessoa2 = {
+    nome: "Giuliana",
+    genero: "feminino",
+    idade: 41,
+    profissao: "Programadora",
+    altura: 1.74
+}
+
+apresenta(pessoa2);
+</code></pre>
+
+            <pre><code class="language-js">
+// Exercício - Refatorado, funções em objetos.
+
+const pessoa = {
+    nome: "Giuliana",
+    genero: "feminino",
+    idade: 41,
+    profissao: "Programadora",
+    altura: 1.74,
+    apresentar: function () {
+        let trataG = "uma", trataI = this.faixaEtaria(this.idade), trataA = "a";
+
+        if (this.genero === "feminino") {
+            trataG = "uma";
+            trataA = "a"
+        } else {
+            trataG = "um";
+            trataA = "o";
+        }
+
+        console.log(`Olá! Meu nome é ${this.nome}, sou ${trataG} ${trataI}${trataA} de ${this.idade} anos, ${this.altura} de altura e sou ${this.profissao}.`);
+    },
+    faixaEtaria: function () {
+        let trataI = "";
+        if (this.idade < 25) {
+            trataI = "jovem";
+        } else if (this.idade < 65) {
+            trataI = "adult";
+        } else {
+            trataI = "idos";
+        }
+        return trataI;
+    }
+}
+
+pessoa.apresentar();
+console.log(pessoa.faixaEtaria());
+</code></pre>
+
+        </div>
+
+        <script type="module" src="../../../../www/prism.js" defer></script>
+    </body>
+
+</html>

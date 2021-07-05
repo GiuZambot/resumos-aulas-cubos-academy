@@ -12,9 +12,9 @@
     <body>
 
         <div class="box">
-            <h3>Execute cada snippet clicando no botão "copiar e executar", verifique no console os resultados, caso queira, copie o código no editor abaixo para alterar o código.</h3>
+            <h3>Execute cada snippet clicando no botão "copiar e executar", verifique no console os resultados, caso queira modificar, o código estará colado no editor abaixo.</h3>
             <textarea name="" id="code" cols="25" rows="10" placeholder="Cole ou digite o código aqui, depois clique em Executar."></textarea>
-            <button onclick="evalFix()">Executar o código acima.</button>
+            <button id="eval">Executar o código acima.</button>
 
             <pre><code class="language-js">
     /* Escopo (note que todos os snippets
@@ -254,16 +254,6 @@
         </div>
 
         <script type="module" src="../../../../www/prism.js" defer></script>
-        <script>
-            function evalFix() {
-                const y = "console.clear();" + document.getElementById("code").value;
-                var script = document.createElement('script');
-                script.type = "text/javascript";
-                script.text = y;
-                document.getElementsByTagName('head')[0].appendChild(script);
-                document.head.removeChild(document.head.lastChild);
-            }
-        </script>
     </body>
 
 </html>

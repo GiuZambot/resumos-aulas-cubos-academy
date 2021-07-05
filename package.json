@@ -1,6 +1,6 @@
 {
   "name": "resumos-aulas-cubos-academy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Site de resumos das aulas Cubos Academy",
   "main": "server.js",
   "scripts": {

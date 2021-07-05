@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Loops e Arrays Javascript</title>
+        <link rel="stylesheet" type="text/css" href="../../../../www/style.css">
+        <link rel="stylesheet" type="text/css" href="../../../../www/prism.css">
+    </head>
+
+    <body>
+
+        <div class="box">
+            <h3>Execute cada snippet clicando no botão "copiar e executar", verifique no console os resultados, caso queira modificar, o código estará colado no editor abaixo.</h3>
+            <textarea name="" id="code" cols="25" rows="10" placeholder="Cole ou digite o código aqui, depois clique em Executar."></textarea>
+            <button id="eval">Executar o código acima.</button>
+
+            <pre><code class="language-js">
+// Arrays = vetor = lista
+// Pode se guardar qualquer tipo de dados aceito pelo js, assim como vários deles na mesma arry
+const nomes = ["Maria", "João", "Pedro", "José", "André"];
+
+// Uma forma de acessar um item da array é especificando seu índice, que começa em zero
+console.log(nomes[1]);
+</code></pre>
+
+            <pre><code class="language-js">
+const nomes = ["Maria", "João", "Pedro", "José", "André"];
+
+console.log(nomes[1]);
+
+nomes[1] = "Carlos";// João foi subistituido por Carlos
+
+console.log(nomes[1]); 
+
+// Pode se usar uma variável no lugar do número do indice
+const x = 4;
+nomes[x] = "Zeca";// André foi subistituido por Zeca
+
+console.log(nomes[x]); 
+</code></pre>
+
+            <pre><code class="language-js">
+// Pegando o tamanho de uma array
+const nomes = ["Maria", "João", "Pedro", "José", "André"];
+
+const tamanho = nomes.length;
+nomes[tamanho] = "Rachel";
+
+console.log(nomes);
+</code></pre>
+
+            <pre><code class="language-js">
+// push() e pop()
+const nomes = ["Maria", "João", "Pedro", "José", "André"];
+
+// Adicionando ao final
+nomes.push("Rachel");
+
+console.log(nomes);
+
+//usando propagação
+const outrosNomes = ["Fábio", "Gabliela", "Tainá"];
+nomes.push(...outrosNomes);
+console.log(nomes);
+
+//Tirando do final
+nomes.pop();
+console.log(nomes);
+</code></pre>
+
+            <pre><code class="language-js">
+// shift() e unshift()
+const nomes = ["Maria", "João", "Pedro", "José", "André"];
+
+//remove o primeiro item
+nomes.shift();
+console.log(nomes);
+
+//insere um item no inicio
+nomes.unshift("Maria");
+console.log(nomes);
+</code></pre>
+
+            <pre><code class="language-js">
+const nomes = ["EUA", "Argentina", "Japão", "Russia", "Uruguay"];
+
+// Adicionandpo Brasl no final
+nomes.push("Brasil");
+console.log(nomes);
+
+// Removendo Brasil do final
+nomes.pop();
+console.log(nomes);
+
+// Inserindo Espanha no inicio
+nomes.unshift("Espanha");
+console.log(nomes);
+
+// Removendo Epanha do inicio
+nomes.shift();
+console.log(nomes);
+
+// Imprimindo o último da lita
+console.log(nomes[nomes.length-1]);
+
+//Imprimindo o segundo
+console.log(nomes[1]);
+
+//imprimindo o de índice 2
+console.log(nomes[2]);
+</code></pre>
+
+            <pre><code class="language-js">
+const nomes = ["Maria", "João", "Pedro", "José", "André"];
+
+// For de c
+console.log("for");
+for (let index = 0; index < nomes.length; index++) {
+    console.log(nomes[index]);
+}
+
+// for of, retorna o conteúdo de cada posição, o iterator
+console.log("\nfor of");
+for (const iterator of nomes) {
+    console.log(iterator);
+}
+
+// Retorna a chave de cada posição, a key
+console.log("\nfor in");
+for (const key in nomes) {
+    console.log(nomes[key]);
+}
+
+// Executa a função para cada item da array
+console.log("\nforEach");
+nomes.forEach((x) => {console.log(x);});
+</code></pre>
+
+            <pre><code class="language-js">
+// while = enquanto (isso for verdade) fará { isso }
+
+let x = 1;
+while (x<=10) {
+    console.log(x);
+    x++;
+}
+
+// o for de C
+for (let index = 1; index <= 10; index++) {
+    console.log(index);
+}
+</code></pre>
+
+            <pre><code class="language-js">
+// Strings são como arrays
+const palavra = "Alemanha";
+
+let encontrado = false;
+for (const iterator of palavra) {
+    if(iterator==="h") {
+        encontrado = true;
+        console.log("Tem a letra h.");
+        break;
+    }
+}
+
+if (!encontrado) {
+    console.log("Não foi encontrado h.");
+}
+</code></pre>
+
+            <pre><code class="language-js">
+// Verificando quantas letras 'a' tem numa palavra
+
+const paralra = "alemanha";
+
+let letrasA = 0;
+for (const letra of paralra) {
+    if (letra === "a") {
+        letrasA++;
+    }
+}
+if (letrasA === 0) {
+    console.log(`Nâo foi encontrada nenhuma letras 'a' em ${paralra}.`);    
+} else if (letrasA === 1) {
+    console.log(`Foi encontrada uma letras 'a' em ${paralra}.`);
+} else {
+    console.log(`Foram encontradas ${letrasA} letras 'a' em ${paralra}.`);
+}
+</code></pre>
+
+            <pre><code class="language-js">
+// imprimindo de 10 até 0
+
+for (let index = 10; index >=0 ; index--) {
+    console.log(index);
+}
+</code></pre>
+
+            <pre><code class="language-js">
+// Imprimindo somente os pares de 1 a 50
+
+console.log("Com for");
+for (let index = 1; index <= 50; index++) {
+    if (index % 2 === 0) {
+        console.log(index);
+    }
+}
+
+console.log("\nCom while");
+let numero = 2;
+while (numero <= 50) {
+    console.log(numero);
+    numero += 2;
+}
+</code></pre>
+
+            <pre><code class="language-js">
+// Imprimindo o índice de um valor encontrado numa array
+
+const nomes = ["Maria", "Carlos", "João", "Pedro", "José", "André"];
+
+console.log("Usando for");
+let encontrado = false;
+for (let i = 0; i < nomes.length; i++) {
+    if (nomes[i] === "João") {
+        console.log(`João encontrado com o índice ${i}`);
+        encontrado = true;
+    }
+}
+if (!encontrado) {console.log("João não foi encontrado");}
+
+console.log("\nUsando for of");
+let i = 0;
+encontrado = false;
+for (const nome of nomes) {
+    if (nome === "João") {
+        console.log(`João encontrado com o índice ${i}`);
+        encontrado = true;
+    }
+    i++;
+}
+if (!encontrado) {console.log("João não foi encontrado");}
+
+console.log("\nUsando for in");
+encontrado = false;
+for (const i in nomes) {
+    if (nomes[i] === "João") {
+        console.log(`João encontrado com o índice ${i}`);
+        encontrado = true;
+    }
+}
+if (!encontrado) {console.log("Jão não foi encontrado");}
+
+console.log("\nUsando while");
+encontrado = false;
+i = 0;
+while (encontrado === false && i <= nomes.length) {
+    if (nomes[i] === "João") {
+        console.log(`João encontrado com o índice ${i}`);
+        encontrado = true;
+    }
+    i++;
+}
+if (!encontrado) {console.log("João não foi encontrado");}
+</code></pre>
+
+        </div>
+
+        <script type="module" src="../../../../www/prism.js" defer></script>
+    </body>
+
+</html>

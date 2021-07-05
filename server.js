@@ -54,7 +54,6 @@ io.on('connect', socket => {
 });
 
 const port = process.env.PORT || 5500;
-const host = process.env.YOUR_HOST || '0.0.0.0';
-http.listen(port, host, () => {
+http.listen(port, () => {
     console.log(`listening on http://localhost:${port}/`);
 });
