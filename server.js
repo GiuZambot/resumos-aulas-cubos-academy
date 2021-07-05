@@ -53,12 +53,8 @@ io.on('connect', socket => {
 
 });
 
-// port process.env.PORT
-let port = process.env.PORT || 5500;
-// const listener = server.listen(port, () => {
-//     console.log(`listening on http://localhost:${port}/`);
-// });
-const host = process.env.YOUR_HOST || '127.0.0.1';
+const port = process.env.PORT || 5500;
+const host = process.env.YOUR_HOST || '0.0.0.0';
 http.listen(port, host, () => {
     console.log(`listening on http://localhost:${port}/`);
 });
