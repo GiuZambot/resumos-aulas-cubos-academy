@@ -16,57 +16,78 @@
             <textarea name="" id="code" cols="25" rows="10" placeholder="Cole ou digite o código aqui, depois clique em Executar."></textarea>
             <button onclick="evalFix()">Executar o código acima.</button>
 
-            <pre><code class="language-js">
-    //Exemplo um: uma variável constante
-    const primeiroNome = "Giuliana";
-    console.log(primeiroNome);
-</code></pre>
-
-            <pre><code class="language-js">
-    //Exemplo dois: variáveis mutáveis
-    let idade = 41;
-    let alturaEmMetros = 1.74;
-
-    console.log(idade);
-    console.log(alturaEmMetros);
-</code></pre>
-
-            <pre><code class="language-js">
-    //Exemplo string template
-    console.log(`Minha idade é ${idade} e minha altura é ${alturaEmMetros}.`);
-</code></pre>
-
-            <pre><code class="language-js">
-    // Escopo
+            <pre><code class="language-js">{
+    /* Escopo (note que todos os snippets
+    estão dentro de escopos, isso é para
+    evitar erros aos executar vários 
+    na mesma página). */
+    
     {
         let idade = 41;
         console.log(idade);
     } // Idade foi criada nesse escopo, então é destruida aqui
+    console.log(idade); // resultará em erro
     
     let idade = 15; 
     {
         // imprime 15 e não é destruida ao final do escopo
         console.log(idade);
     }
+    console.log(idade);
+}       
 </code></pre>
 
-            <pre><code class="language-js">
+            <pre><code class="language-js">{
+    // Resumos sobre variáveis Javascript
+    // Uma constante, depois de definida não pode mudar.
+    
+    const primeiroNome = "Giuliana";
+    console.log(primeiroNome);
+
+    // Resultará em erro
+    primeiroNome = "outro nome";
+    }
+</code></pre>
+
+            <pre><code class="language-js">{
+    // Variáveis mutáveis
+    let idade = 41;
+    let alturaEmMetros = 1.74;
+
+    idade = 40;
+    altura = 1.69;
+
+    console.log(idade);
+    console.log(alturaEmMetros);
+    }
+</code></pre>
+
+            <pre><code class="language-js">{
+    // Exemplo string template
+    const apelido = "Giu";
+    console.log(`Meu apelido é ${apelido}.`);
+    }
+</code></pre>
+
+            <pre><code class="language-js">{
     // Tipos de dados
     let nome = "Giu" //string
-    let idade = 41; // number
+    let idadeHoje = 41; // number
     let altura = 1.74; //decimal
     let ehPorf = true; // boleano
-    let nota; //undefined
-    console.log(nota); 
+    let nota; 
+    console.log(nota); //undefined
     nota = 10;
     console.log(nota);
     nota = null; // null
     console.log(nota);
     nota = NaN; // not a number = não um número
+    console.log(nota);
+}
 </code></pre>
 
-            <pre><code class="language-js">
-    // Tipos de dados
+            <pre><code class="language-js">{
+    // Operadores
     let x = 10,
         y = 2;
     
@@ -93,45 +114,19 @@
     // Raiz
     resultado = x ** (1 / y);
     console.log(resultado);
+}
 </code></pre>
 
-            <pre><code class="language-js">
-    // Concatenando strings
-    const nome = "Giu";
+            <pre><code class="language-js">{
+    // Concatenando strings com +
+    const priNome = "Giu";
     const sobrenome = "Zambot";
-    const nomeCompleto = nome + " " + sobrenome;
+    const nomeCompleto = priNome + " " + sobrenome;
     console.log(nomeCompleto);
-
-    // Tipos de dados
-    let x = 10,
-        y = 2;
-
-    // Somar
-    let resultado = x + y;
-    console.log(resultado);
-
-    // Subtrair
-    resultado = x - y;
-    console.log(resultado);
-
-    // Multiplicar
-    resultado = x * y;
-    console.log(resultado);
-
-    // Dividir
-    resultado = x / y;
-    console.log(resultado);
-
-    // Exponenciar 
-    resultado = x ** y;
-    console.log(resultado);
-
-    // Raiz
-    resultado = x ** (1 / y);
-    console.log(resultado);
+}
 </code></pre>
 
-            <pre><code class="language-js">
+            <pre><code class="language-js">{
     // infinity e NaN
     let x = 10,
         y = 0;
@@ -140,24 +135,25 @@
     let resultado = x / y;
     console.log(`A divisão de ${x} e ${y} é ${resultado}`);
 
-
     // zero por zero
     x = 0;
     resultado = x / y;
     console.log(`A divisão de ${x} e ${y} é ${resultado}`);
+}
 </code></pre>
 
-            <pre><code class="language-js">
+            <pre><code class="language-js">{
     // Atenção aos tipos corretos
     let x = "10",
         y = 2;
     
     // Resultará em 102, pois misturou nember com string
     let resultado = x + y;
-    console.log(`A soma de ${x} e ${y} é ${resultado}`);                
+    console.log(`A soma de ${x} e ${y} é ${resultado}`);
+} 
 </code></pre>
 
-            <pre><code class="language-js">
+            <pre><code class="language-js">{
     // Outros operadores
     let x = 5;
     
@@ -192,10 +188,11 @@
     //Raiz 2 de 5
     x = 5;
     x **= 1 / 2;
-    console.log(x);                
+    console.log(x);
+            }               
 </code></pre>
 
-            <pre><code class="language-js">
+            <pre><code class="language-js">{
     // x++ e ++x
     let x = 10;
 
@@ -207,9 +204,10 @@
 
     y = ++x; //soma e depois retorna
     console.log(y); //13
+            }
 </code></pre>
 
-            <pre><code class="language-js">
+            <pre><code class="language-js">{
     // Exponenciaçaõ e radiaciação
 
     //Exponencia 5 x por 3
@@ -221,6 +219,7 @@
     x = 5 ** 3;
     console.log(x);
     
+    // ou com Math.pow()
     console.log(Math.pow(5, 3));
     
     //Raiz 2 de 5
@@ -233,16 +232,18 @@
     console.log(x);
     
     console.log(Math.sqrt(5, 2));                
+            }
 </code></pre>
 
-            <pre><code class="language-js">
-    // Operador módulo: devolce o resto de uma divisão
+            <pre><code class="language-js">{
+    // Operador módulo: devolve o resto de uma divisão
     // 12 / 5 = 2 e sobra dois.
     const resto = 12 % 5;
     console.log(resto);                
+            }
 </code></pre>
 
-            <pre><code class="language-js">
+            <pre><code class="language-js">{
     //Exercício cinco
     let lado = 5,
         largura = 16,
@@ -262,10 +263,21 @@
     //Triangulo
     resposta = (base * altura) / 2;
     console.log(`A área do Triangulo é ${resposta}`);                
+            }
 </code></pre>
         </div>
 
         <script type="module" src="../../../../www/prism.js" defer></script>
+        <script>
+            function evalFix() {
+                const y = "console.clear();" + document.getElementById("code").value;
+                var script = document.createElement('script');
+                script.type = "text/javascript";
+                script.text = y;
+                document.getElementsByTagName('head')[0].appendChild(script);
+                document.head.removeChild(document.head.lastChild);
+            }
+        </script>
     </body>
 
 </html>
