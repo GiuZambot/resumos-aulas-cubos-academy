@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+:root {
+    --color-pri1: hsl(167, 36%, 54%);
+    --color-pri2: hsl(205, 30%, 42%);
+    --color-pri3: hsl(0, 83%, 58%);
+    --color-pri3-op: hsla(245, 23%, 78%, 0.15);
+    --color-sec1: hsl(245, 10%, 22%);
+    --color-sec2: hsl(245, 11%, 44%);
+    --propor: 77%;
+    --minwidth: 880px;
+    --font-heading: 'Ibarra Real Nova', serif;
+    --font-body: 'Public Sans', serif;
+}
+
+* {
+    color: var(--color-pri3);
+    font-family: 'Nothing You Could Do', cursive !important;
+}

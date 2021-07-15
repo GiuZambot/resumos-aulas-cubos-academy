@@ -1,0 +1,11 @@
+{
+  "name": "desafio-1-frontend",
+  "version": "1.0.0",
+  "description": "![](https://i.imgur.com/xG74tOh.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}

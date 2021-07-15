@@ -1,0 +1,76 @@
+@import url('./global.css');
+ 
+.b-contato-msg {
+    border-bottom: 1px solid var(--color-pri3-op);
+    border-top: 1px solid var(--color-pri3-op);
+    width: var(--propor);
+    min-width: var(--minwidth);
+    padding: 48px 0px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.b-contato-msg__base {
+    flex-basis: 50%;
+}
+
+.b-contato-msg__redes {
+    margin-top: 55px;
+}
+
+/*  formulario ======== */
+
+.b-contato-form {
+    width: var(--propor);
+    min-width: var(--minwidth);
+    margin: 50px 0px 100px 0px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.b-contato-form__base {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.textinput {
+    color:var(--color-pri3);
+    background-color: var(--color-pri3-op);
+    border: 1px solid transparent;
+    padding: 10px;
+    margin-bottom: 24px;
+    line-height: 28px;
+
+}
+
+.textinput:active {
+    border-color: var(--color-pri3-op);
+    border: 1px solid;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 30px;
+    opacity: 0.8;
+}
+
+.btn__sec__enviar {
+    color: var(--color-sec1);
+    background-color: var(--color-pri2);
+    border: none;
+    width: 164px;
+    height: 48px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn__sec__enviar:hover {
+    color: var(--color-sec1);
+    background-color: var(--color-pri1);
+}

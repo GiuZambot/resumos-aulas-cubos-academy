@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Contato</title>
+        <link rel="stylesheet" href="./css/contato.css">
+    </head>
+
+    <body class="b-body1">
+
+        <header class="b-heading b-header">
+            <nav class="b-header__nav">
+                <ul class="b-header__ul">
+                    <li class="b-btn index">home</li>
+                    <li class="b-btn portfolio">portfólio</li>
+                    <li class="b-btn contato">contato</li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <section class="b-contato-msg">
+            <h1 class="b-heading b-heading__h1">Entre em Contato</h1>
+            <div class="b-contato-msg__base">
+                <p class="">Eu adoraria escutar sobre seu trabalho atual e como eu poderia ajudar. Atualmente estou procurando por um cargo e aberto para várias oportunidades. Minha preferência é uma oportunidade em uma empresa Britânica. Mas também estou feliz em escutar sobre oportunidades remotas. Sou uma pessoa trabalhadora e positiva que sempre fará as tasks com um senso de propósito e atenção aos detalhes. Fique livre para checar meu perfis abaixo e entrar em contato utilizando o formulário.</p>
+                <div class="b-contato-msg__redes">
+                    <img class="b-btn" src="./assets/icons/github-dark.svg" alt="Ícone Github">
+                    <img class="b-btn" src="./assets/icons/twitter-dark.svg" alt="Ícone Twitter">
+                    <img class="b-btn" src="./assets/icons/linkedin-dark.svg" alt="Ícone Linkedin">
+                </div>
+            </div>
+        </section>
+
+        <section class="b-contato-form">
+            <h1 class="b-heading b-heading__h1">Contato</h1>
+            <form class="b-contato-form__base" method="post" action="contato.html">
+                <label class="label" for="nome">Nome</label>
+                <input class="textinput" name="nome" id="nome" type="text" placeholder="ex: João Fugueira">
+                <label class="label" for="email">E-mail</label>
+                <input class="textinput" name="email" id="email" type="text" placeholder="joaofig@gmail.com">
+                <label class="label" for="msg">Mensagem</label>
+                <textarea class="textinput" name="msg" id="msg" rows="3" placeholder="Olá, essa é minha mensagem"></textarea>
+                <button class="btn__sec__enviar" name="enviar" type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <footer class="b-footer">
+            <div class="b-footer__box">
+                <nav class="b-footer__nav">
+                    <ul class="b-footer__ul">
+                        <li class="b-btn index">home</li>
+                        <li class="b-btn portfolio">portifólio</li>
+                        <li class="b-btn contato">contato</li>
+                    </ul>
+                </nav>
+                <div>
+                    <img onclick="tools.dark();" class="b-btn" src="./assets/icons/github-light.svg" alt="Ícone Github">
+                    <img class="b-btn" src="./assets/icons/twitter-light.svg" alt="Ícone Twitter">
+                    <img class="b-btn" src="./assets/icons/linkedin-light.svg" alt="Ícone Linkedin">
+                </div>
+            </div>
+        </footer>
+
+        <script src="./scripts/script.js"></script>
+    </body>
+
+</html>

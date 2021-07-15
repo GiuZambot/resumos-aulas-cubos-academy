@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@500&family=Public+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* cores ======================= */
+
+:root {
+    --color-pri1: hsl(167, 36%, 54%);
+    --color-pri2: hsl(205, 41%, 21%);
+    --color-pri3: hsl(245, 10%, 22%);
+    --color-pri3-op: hsla(245, 10%, 22%, 0.15);
+    --color-sec1: hsl(0, 0%, 98%);
+    --color-sec2: hsl(240, 2%, 92%);
+    --propor: 77%;
+    --minwidth: 880px;
+    --font-heading: 'Ibarra Real Nova', serif;
+    --font-body: 'Public Sans', serif;
+}
+
+/* aspect ratios =============== */
+
+[class*="--ar"]::before {
+    content: "";
+    height: 0;
+    float: left;
+    padding-bottom: calc( 100% / (var(--ar)) );
+}
+
+[class*="--ar"]::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* tipografia ================= */
+
+body {
+    background-color: var(--color-sec1);
+    min-height: 100vh;
+    font-family: var(--font-body);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.b-body1 {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.b-body2 {
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.b-heading {
+    color: var(--color-pri3);
+    font-family: var(--font-heading);
+}
+
+.b-heading__h1 {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing:-0.45px;
+}
+
+.b-heading__h2 {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 42x;
+    letter-spacing:-0.36px;
+}
+
+.b-heading__h3 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing:-0.29px;
+}
+
+/* botões ==================================== */
+
+.b-btn {
+    padding: 10px 7px;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.b-btn__active {
+    color: var(--color-pri1);
+}
+
+.b-btn:hover {
+    color: var(--color-pri1);
+}
+
+.b-btn__sec {
+    color: var(--color-pri3);
+    background-color: var(--color-sec1);
+    border: 1px solid var(--color-pri3);
+    padding: 16px;
+    text-align: center;
+}
+
+.b-btn__sec:hover {
+    color: var(--color-sec1);
+    background-color: var(--color-pri3);
+}
+
+/* header ===================== */
+
+.b-header {
+    background-color: var(--color-sec1);
+    background-image: url("../assets/logo-dark.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    width:var(--propor);
+    min-width: var(--minwidth);
+    margin: 50px 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.b-header__nav {
+    width: 26%;
+    min-width: 280px;
+}
+
+.b-header__ul {
+    list-style: none;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* contato ===================== */
+
+.b-contato {
+    background-color: var(--color-sec1);
+
+    width:var(--propor);
+    min-width: var(--minwidth);
+    margin-bottom: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.b-btn__sec__contato {
+    padding: 17px 50px;
+}
+
+
+/* footer ===================== */
+
+.b-footer {
+    color: var(--color-sec1);
+    background-color: var(--color-pri3);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.b-footer__box {
+    background-image: url("../assets/logo-light.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    width:var(--propor);
+    min-width: var(--minwidth);
+    padding: 23px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.b-footer__nav {
+    width: 34%;
+    min-width: 375px;
+}
+
+.b-footer__ul {
+    margin-left: 100px;
+    list-style: none;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+}
+
+.b-footer img {
+    margin-left: 15px;
+}
+
+.b-footer img:hover {
+    filter: invert(67%) sepia(47%) saturate(344%) hue-rotate(117deg) brightness(87%) contrast(87%);
+}

@@ -1,0 +1,60 @@
+@import url('./global.css');
+ 
+/* sobre section ====================== */
+:root {
+    --proporPort: 70%;
+}
+
+.b-port {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: var(--proporPort);
+    min-width: var(--minwidth);
+    margin-bottom: 80px;
+    --ar: 16/8;
+    display: flex;
+}
+
+.b-port__1 {
+    background-image: url("../assets/portfolio/manage/image-portfolio-manage.jpg");
+    background-position: left;
+    justify-content: flex-end;
+}
+
+.b-port__2 {
+    background-image: url("../assets/portfolio/bookmark/image-portfolio-bookmark.jpg");
+    background-position: right;
+    justify-content: flex-start;
+}
+
+.b-port__3 {
+    background-image: url("../assets/portfolio/insure/image-portfolio-insure.jpg");
+    background-position: left;
+    justify-content: flex-end;
+}
+
+.b-port__4 {
+    background-image: url("../assets/portfolio/fylo/image-portfolio-fylo.jpg");
+    background-position: right;
+    margin-bottom: 150px;
+    justify-content: flex-start;
+}
+
+.b-port__box {
+    background-color: var(--color-sec1);
+    border-bottom: 1px solid var(--color-pri3-op);
+    border-top: 1px solid var(--color-pri3-op);
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.b-port__box__p {
+    margin: 28px 0px 54px 0px;
+}
+
+.b-btn__sec__proj {
+    align-self: flex-start;
+    padding: 16px 38px;
+}

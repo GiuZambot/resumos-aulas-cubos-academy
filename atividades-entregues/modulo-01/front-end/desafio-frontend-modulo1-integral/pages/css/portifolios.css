@@ -1,0 +1,125 @@
+@import url('./global.css');
+ 
+/* hero section ====================== */
+.b-hero {
+    background-size: 100%;
+    width: var(--propor);
+    min-width: var(--minwidth);
+    margin-bottom: 115px;
+    --ar: 13/6;
+}
+
+.b-hero:hover {
+    animation: hero 7s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes hero {
+    20% {background-size: 150%; background-position: 10% 20%;}
+    60% {background-size: 160%; background-position: 10% 180%;}
+    80% {background-size: 150%; background-position: 100% -20%;}
+    100% {background-size: 160%; background-position: 90% 180%;}
+}
+
+.b-heading__h1 {
+    padding: 55px 28px;
+}
+
+.b-heading__h2 {
+    width: 340px;
+}
+
+/* Projeto section ====================== */
+
+.b-proj {
+    width: var(--propor);
+    min-width: var(--minwidth);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* sobre */
+.b-sobre {
+    border-bottom: 1px solid var(--color-pri3-op);
+    border-top: 1px solid var(--color-pri3-op);
+    padding: 48px 0px;
+    flex-basis: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.b-sobre__p {
+    padding: 30px 0px 65px 0px;
+}
+
+.b-sobre__info {
+    color: var(--color-pri1);
+    padding: 5px 0px;
+}
+
+.b-btn__sec {
+    margin-top: 32px;
+    padding: 17px 60px;
+}
+
+/* Main */
+.b-main {
+    flex-basis: 57%;
+}
+
+.b-main__h3 {
+    margin-bottom: 28px;
+}
+
+.b-main__p {
+    margin-bottom: 40px;
+}
+
+.b-main__previews {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+/* nav protfolio ===================== */
+
+.b-nav-port {
+    background-color: var(--color-sec1);
+    border-bottom: 1px solid var(--color-pri3-op);
+    border-top: 1px solid var(--color-pri3-op);
+
+    width:var(--propor);
+    min-width: var(--minwidth);
+    margin-bottom: 115px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.b-nav-port__div {
+    display: flex;
+    align-items: center;
+    padding: 28px 0px;
+}
+
+.b-nav-port__dir {
+    text-align: end;
+    margin-right: 32px;
+}
+
+.b-nav-port__esq {
+    margin-left: 32px;
+}
+
+.b-btn__cap {
+    text-transform: unset;
+    font-family: var(--font-heading);
+}
+
+.b-btn__sec__contato {
+    padding: 17px 50px;
+}
