@@ -10,8 +10,12 @@ const tools = {
         for (let i of links) {
             const el = document.querySelectorAll(`[class*="b-btn ${i.classList[1]}"]`);
             if (el) {
-                for (let j of el) {
-                    j.addEventListener("click", () => window.location = `./${i.classList[1]}.html`);
+                if (i.classList[1] == "#") {
+                    i.addEventListener("click", () => window.location.href = `#${i.classList[2]}`);
+                } else {
+                    for (let j of el) {
+                        j.addEventListener("click", () => window.location = `./${i.classList[1]}.html`);
+                    };
                 };
             };
         };

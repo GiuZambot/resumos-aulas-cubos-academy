@@ -1,4 +1,8 @@
-![x](https://i.imgur.com/xG74tOh.png)
+![](https://i.imgur.com/xG74tOh.png)
+
+[Site servido na Vercel](https://desafio-modulo1-cubos.vercel.app/)
+
+[Site servido no Heroku](https://resumos-cubos.herokuapp.com/atividades-entregues/modulo-01/front-end/desafio-frontend-modulo1-integral/pages/index.html)
 
 # Desafio | Front-end - Módulo 1
 
@@ -19,124 +23,124 @@ O objetivo deste exercício é replicar o website encontrado no arquivo 'Desafio
 
 Seções
 
-- Header ![x](https://i.imgur.com/Vwj9U0y.png)
+- Header ![](https://i.imgur.com/Vwj9U0y.png)
 
-- Hero Section ![x](https://i.imgur.com/tjYO6R6.png)
+- Hero Section ![](https://i.imgur.com/tjYO6R6.png)
 
-- Sobre Section ![x](https://i.imgur.com/KHPaEWW.png)
+- Sobre Section ![](https://i.imgur.com/KHPaEWW.png)
 
-- Contato Section ![x](https://i.imgur.com/e88URFi.png)
+- Contato Section ![](https://i.imgur.com/e88URFi.png)
 
-- Footer ![x](https://i.imgur.com/P06m37L.png)
+- Footer ![](https://i.imgur.com/P06m37L.png)
 
 ### Portfolio
 
 Seções
 
-- Header ![x](https://i.imgur.com/1pDIzMz.png)
+- Header ![](https://i.imgur.com/1pDIzMz.png)
 
-- Manage Section ![x](https://i.imgur.com/jHweGIb.png)
+- Manage Section ![](https://i.imgur.com/jHweGIb.png)
 
-- Bookmark Section ![x](https://i.imgur.com/uTpctrq.png)
+- Bookmark Section ![](https://i.imgur.com/uTpctrq.png)
 
-- Insure Section ![x](https://i.imgur.com/BsAWB7m.png)
+- Insure Section ![](https://i.imgur.com/BsAWB7m.png)
 
-- Fylo Section ![x](https://i.imgur.com/W9s2afk.png)
+- Fylo Section ![](https://i.imgur.com/W9s2afk.png)
 
-- Contato Section ![x](https://i.imgur.com/e88URFi.png)
+- Contato Section ![](https://i.imgur.com/e88URFi.png)
 
-- Footer ![x](https://i.imgur.com/P06m37L.png)
+- Footer ![](https://i.imgur.com/P06m37L.png)
 
 ### Portfolio - 01 - Manage
 
 Seções
 
-- Header ![x](https://i.imgur.com/1pDIzMz.png)
+- Header ![](https://i.imgur.com/1pDIzMz.png)
 
-- Hero Section ![x](https://i.imgur.com/JYY2lNG.png)
+- Hero Section ![](https://i.imgur.com/JYY2lNG.png)
 
-- Descrição Projeto Aside ![x](https://i.imgur.com/uEgRim6.png)
+- Descrição Projeto Aside ![](https://i.imgur.com/uEgRim6.png)
 
 - Main Section 
-![x](https://i.imgur.com/O1JyZtK.png)
+![](https://i.imgur.com/O1JyZtK.png)
 
-- Links Section ![x](https://i.imgur.com/zGJMDOE.png)
+- Links Section ![](https://i.imgur.com/zGJMDOE.png)
 
-- Contato Section ![x](https://i.imgur.com/e88URFi.png)
+- Contato Section ![](https://i.imgur.com/e88URFi.png)
 
-- Footer ![x](https://i.imgur.com/P06m37L.png)
+- Footer ![](https://i.imgur.com/P06m37L.png)
 
 ### Portfolio - 02 - Bookmark
 
 Seções
 
-- Header ![x](https://i.imgur.com/1pDIzMz.png)
+- Header ![](https://i.imgur.com/1pDIzMz.png)
 
-- Hero Section ![x](https://i.imgur.com/ag3Madi.png)
+- Hero Section ![](https://i.imgur.com/ag3Madi.png)
 
 - Descrição Projeto Aside 
-![x](https://i.imgur.com/JDvgptu.png)
+![](https://i.imgur.com/JDvgptu.png)
 
 - Main Section 
-![x](https://i.imgur.com/T41K6z3.png)
+![](https://i.imgur.com/T41K6z3.png)
 
-- Links Section ![x](https://i.imgur.com/UpCLzFL.png)
+- Links Section ![](https://i.imgur.com/UpCLzFL.png)
 
-- Contato Section ![x](https://i.imgur.com/e88URFi.png)
+- Contato Section ![](https://i.imgur.com/e88URFi.png)
 
-- Footer ![x](https://i.imgur.com/P06m37L.png)
+- Footer ![](https://i.imgur.com/P06m37L.png)
 
 ### Portfolio - 03 - Insure
 
 Seções
 
-- Header ![x](https://i.imgur.com/1pDIzMz.png)
+- Header ![](https://i.imgur.com/1pDIzMz.png)
 
-- Hero Section ![x](https://i.imgur.com/yJMQ0iJ.png)
+- Hero Section ![](https://i.imgur.com/yJMQ0iJ.png)
 
 - Descrição Projeto Aside 
-![x](https://i.imgur.com/zofNYva.png)
+![](https://i.imgur.com/zofNYva.png)
 
 - Main Section 
-![x](https://i.imgur.com/BMMJXlz.png)
+![](https://i.imgur.com/BMMJXlz.png)
 
-- Links Section ![x](https://i.imgur.com/9fYN4lI.png)
+- Links Section ![](https://i.imgur.com/9fYN4lI.png)
 
-- Contato Section ![x](https://i.imgur.com/e88URFi.png)
+- Contato Section ![](https://i.imgur.com/e88URFi.png)
 
-- Footer ![x](https://i.imgur.com/P06m37L.png)
+- Footer ![](https://i.imgur.com/P06m37L.png)
 
 ### Portfolio - 04 - Fylo
 
 Seções
 
-- Header ![x](https://i.imgur.com/1pDIzMz.png)
+- Header ![](https://i.imgur.com/1pDIzMz.png)
 
-- Hero Section ![x](https://i.imgur.com/7IcYjiF.png)
+- Hero Section ![](https://i.imgur.com/7IcYjiF.png)
 
 - Descrição Projeto Aside 
-![x](https://i.imgur.com/fKuRKYX.png)
+![](https://i.imgur.com/fKuRKYX.png)
 
 - Main Section 
-![x](https://i.imgur.com/MQC6y17.png)
+![](https://i.imgur.com/MQC6y17.png)
 
-- Links Section ![x](https://i.imgur.com/3WGHl8V.png)
+- Links Section ![](https://i.imgur.com/3WGHl8V.png)
 
-- Contato Section ![x](https://i.imgur.com/e88URFi.png)
+- Contato Section ![](https://i.imgur.com/e88URFi.png)
 
-- Footer ![x](https://i.imgur.com/P06m37L.png)
+- Footer ![](https://i.imgur.com/P06m37L.png)
 
 ### Contato
 
 Seções
 
-- Header ![x](https://i.imgur.com/ubDorki.png)
+- Header ![](https://i.imgur.com/ubDorki.png)
 
-- Entre em contato Section ![x](https://i.imgur.com/4GLs5Iw.png)
+- Entre em contato Section ![](https://i.imgur.com/4GLs5Iw.png)
 
-- Contato Section ![x](https://i.imgur.com/VvO2m7w.png)
+- Contato Section ![](https://i.imgur.com/VvO2m7w.png)
 
-- Footer ![x](https://i.imgur.com/P06m37L.png)
+- Footer ![](https://i.imgur.com/P06m37L.png)
 
 ## Aulas úteis:
 - [Elementos semânticos de bloco](https://plataforma.cubos.academy/curso/b0149c95-5986-4ac2-ac4c-a0f323353f26/data/11/06/2021/aula/11e59f3b-d961-4020-9393-25f6a4b1bd7f/11049bbc-df32-43fb-8f01-1b0026b8ada5)
