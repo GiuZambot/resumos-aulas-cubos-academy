@@ -19,51 +19,24 @@ function ver(path) {
     window.open(path, "_blank");
 }
 
-function criaMenu(itens) {
-
-    for (let i = 0; i < itens.length; i++) {
-        if (itens[i].hasOwnProperty("name") && itens[i].size > 0) {
-            const titulo = itens[i].name.replace(/.html/ig, "").replace(/-/ig, " ").toCap();
-            let btn = createNode('button');
-            btn.className = 'btn';
-            btn.innerHTML = titulo;
-            if (itens[i].type == "file") {
-                btn.onclick = () => ver(itens[i].path);
-            } else {
-                btn.onclick = () => subMenu(i);
-            }
-            append(RS, btn);
+function criaMenu(menu) {
+    console.log(menu);
+    if (!menu) return;
+    var str = "";
+    for (var i in menu) {
+        const titulo = menu[i].name.replace(/.html/ig, "").replace(/-/ig, " ").toCap();
+        if (menu[i].type == "file") {
+            str += "<li class='btn'><a href='./" + menu[i].path + "'>" + titulo + "</a></li>";
+        } else if (menu[i].size > 0) {
+            str += "<li>" + titulo + "<ul>" + criaMenu(menu[i].children) + "</ul></li>"; 
         }
     }
-}
+    return str;
+};
 
-function subMenu(menuItem) {
-    MenuNow.push(menuItem);
-    console.log(MenuNow);
-
-    RS.innerHTML = ``;
-    if (dataMenuNow) {
-        dataMenuNow = dataMenuNow[menuItem].children;
-    } else {
-        dataMenuNow = dataMenu[menuItem].children;
-    }
-    console.log(dataMenuNow);
-
-    criaMenu(dataMenuNow);
-    let btn = createNode('button');
-    btn.className = 'btn';
-    btn.innerHTML = "VOLTAR";
-    btn.onclick = () => menu();
-    append(RS, btn);
-}
 
 async function menu(data) {
-    dataMenuNow = null;
-    MenuNow = [];
-    console.log("Menu Inicial");
-    RS.innerHTML = ``;
-    !dataMenu ? dataMenu = data.children : false;
-    criaMenu(dataMenu);
+    RS.innerHTML = "<ul>" + criaMenu(data.children) + "</ul>";
 }
 
 // conecta com servidor

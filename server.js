@@ -19,7 +19,7 @@ app.get(/i/, function (req, res) {
 // let data = require("./www/menu.json");
 
 //menu dinâmico
-const data = dirTree('./', { extensions: /\.html/, exclude: /(.vscode|.git|www|node_modules)$/ });
+const data = dirTree('./', { extensions: /\.html/, exclude: /(.vscode|.git|.github|www|node_modules)$/ });
 
 // const lineReader = require('line-reader');
 // lineReader.eachLine('./teste.txt', function (line, last) {

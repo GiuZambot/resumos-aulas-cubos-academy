@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Metodos para String e Array Javascript</title>
+        <link rel="stylesheet" type="text/css" href="../../../../www/style.css">
+        <link rel="stylesheet" type="text/css" href="../../../../www/prism.css">
+    </head>
+
+    <body>
+
+        <div class="box">
+            <h3>Execute cada snippet clicando no botão "copiar e executar", verifique no console os resultados, caso queira, copie o código no editor abaixo para alterar o código.</h3>
+            <textarea name="" id="code" cols="25" rows="10" placeholder="Cole ou digite o código aqui, depois clique em Executar."></textarea>
+            <button id="eval">Executar o código acima.</button>
+
+            <pre><code class="language-js">
+let agendado = setTimeout(() => {
+    console.log("Acabou o tempo");
+}, 2000);
+
+setTimeout(clearInterval, 6000, agendado);
+</code></pre>
+
+            <pre><code class="language-js">
+let contagem = 10;
+agendado = setInterval(() => {
+    console.log(`Bomba explodirá em ${contagem}`);
+    contagem--;
+    contagem < 0 ? (console.log("BOOOMMMM"), clearInterval(agendado)) : false;
+}, 300);
+</code></pre>
+
+            <pre><code class="language-js">
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const filtered = arr.filter(x => x > 5).filter(x => x % 2 === 0);
+
+console.log("Filtro: " + filtered.toString());
+
+const arrModificado = arr.map(x => x ** 2);
+
+console.log(arrModificado);
+
+arr.forEach(element => {
+    console.log(element);
+});
+</code></pre>
+
+
+            <pre><code class="language-js">
+
+</code></pre>
+        </div>
+
+        <script type="module" src="../../../../www/prism.js" defer></script>
+    </body>
+
+</html>

@@ -1,0 +1,229 @@
+:root {
+    --color-very-dark-greyish-blue: hsl(217, 19%, 35%);
+    --color-desaturated-dark-blue: hsl(214, 17%, 51%);
+    --color-greyish-blue: hsl(212, 23%, 69%);
+    --color-light-greyish-blue: hsl(210, 46%, 95%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 50%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var(--color-light-greyish-blue);
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.625rem;
+}
+
+.content-wrapper {
+    padding: 3rem;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 40.875rem;
+    border-radius: 1.5rem;
+    box-shadow: 5px 15px 25px rgba(36, 25, 25, 0.05);
+}
+
+@media only screen and (min-width: 1000px) {
+    .card {
+        flex-direction: row;
+        max-width: 90rem;
+    }
+}
+
+.card__img {
+    height: 26rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 1000px) {
+    .card__img {
+        height: auto;
+        flex-basis: 110%;
+        border-bottom-left-radius: 1.5rem;
+        border-top-right-radius: 0;
+    }
+}
+
+.card__img img {
+    object-fit: cover;
+    object-position: 0 0;
+    height: 100%;
+    width: 100%;
+}
+
+.card__text-wrapper {
+    padding: 4rem;
+    padding-bottom: 1.5rem;
+    background-color: white;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+@media only screen and (min-width: 1000px) {
+    .card__text-wrapper {
+        padding: 4rem 5rem;
+        border-top-right-radius: 1.5rem;
+        border-bottom-left-radius: 0;
+    }
+}
+
+.card__heading {
+    margin-bottom: 2rem;
+    color: var(--color-very-dark-greyish-blue);
+    font-size: 2rem;
+}
+
+@media only screen and (min-width: 1000px) {
+    .card__heading {
+        font-size: 2.5rem;
+    }
+}
+
+.card__paragraph {
+    margin-bottom: 3rem;
+    color: var(--color-desaturated-dark-blue);
+}
+
+.card__footer-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.card .author__img {
+    width: 5rem;
+    margin-right: 2rem;
+    border-radius: 50%;
+}
+
+.card .author__info {
+    margin-right: auto;
+}
+
+.card .author__name {
+    color: var(--color-very-dark-greyish-blue);
+    font-weight: 700;
+}
+
+.card .author__date {
+    color: var(--color-greyish-blue);
+}
+
+.card__btn {
+    position: relative;
+    height: 4rem;
+    width: 4rem;
+    border: none;
+    border-radius: 50%;
+    background-color: #edf1fa;
+    outline: none;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.card__btn:hover {
+    background-color: #c4c8cf;
+}
+
+.card__btn svg {
+    height: auto;
+    width: 2.5rem;
+}
+
+.card__btn svg * {
+    fill: var(--color-desaturated-dark-blue);
+}
+
+.popup {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: none;
+    align-items: center;
+    padding: 2.125rem 4rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    background-color: var(--color-very-dark-greyish-blue);
+    z-index: 3;
+}
+
+@media only screen and (min-width: 1000px) {
+    .popup {
+        left: 73%;
+        bottom: 11rem;
+        width: auto;
+        padding: 1.75rem 3.5rem;
+        border-radius: 1rem;
+    }
+    .popup::after {
+        content: '';
+        position: absolute;
+        bottom: -2rem;
+        left: 50%;
+        transform: translate(-50%);
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid var(--color-very-dark-greyish-blue);
+    }
+}
+
+.popup__text {
+    margin-right: 2rem;
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+
+.popup__icons {
+    display: flex;
+    align-items: center;
+}
+
+.popup__icons a:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+.popup__icons a svg {
+    height: 3rem;
+    width: auto;
+}
+
+.popup__icons a svg * {
+    fill: white;
+}
+
+.popup__icons a svg:hover * {
+    fill: #c7ccd1;
+}
+
+.popup__icons a .twitter {
+    height: 2.375rem;
+}
+
+.popup.show {
+    display: flex;
+}

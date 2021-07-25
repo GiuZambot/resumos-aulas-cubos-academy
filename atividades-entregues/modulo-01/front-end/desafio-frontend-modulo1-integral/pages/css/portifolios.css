@@ -12,7 +12,10 @@
 .b-hero:hover {
     animation: hero 7s infinite;
     animation-direction: alternate;
+    
 }
+
+b:
 
 @keyframes hero {
     20% {background-size: 150%; background-position: 10% 20%;}
@@ -23,6 +26,10 @@
 
 .b-heading__h1 {
     padding: 55px 28px;
+    height: ;
+    animation-iteration-count: ;
+    animation-direction:normal ;
+    animation-play-state: paused;
 }
 
 .b-heading__h2 {

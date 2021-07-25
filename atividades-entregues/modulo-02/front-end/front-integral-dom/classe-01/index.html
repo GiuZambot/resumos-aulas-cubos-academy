@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+
+        <title>Slider</title>
+    </head>
+
+    <body>
+        <div class="content-wrapper">
+            <div class="text-wrapper">
+                <p class="review-text">“Estive interessada em código por um tempo mas não tomava uma atitude, até agora. Não consigo recomendar esse curso o suficiente. Estou no trabalho dos meu sonhos e vejo um futuro brilhante!”</p>
+                <div class="author__content-wrapper">
+                    <div class="author__name">Gabriela da Silva</div>
+                    <div class="author__title">Desenvolvedora Fullstack</div>
+                </div>
+            </div>
+
+            <div class="carousel">
+                <div class="carousel__img-wrapper">
+                    <img src="./assets/gabriela.jpg" alt="bootcamp graduate" class="carousel__img">
+                </div>
+                <div class="carousel__btn-wrapper">
+                    <button id="btn-prev" class="btn btn--previous" onclick="pessoaAnterior()"><img src="./assets/icon-prev.svg" alt="previous button"></button>
+                    <button id="btn-next" class="btn btn--next" onclick="proximaPessoa()"><img src="./assets/icon-next.svg" alt="next button"></button>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        const NOME = document.querySelector(".author__name");
+        const IMG = document.querySelector(".carousel__img");
+        const REVI = document.querySelector(".review-text");
+        const PROF = document.querySelector(".author__title");
+        let pessoaAtual = 0;
+
+        const pessoas = [{
+            nome: 'Gabriela da Silva',
+            profissao: 'Desenvolvedora Fullstack',
+            descricao: '“Estive interessada em código por um tempo mas não tomava uma atitude, até agora. Não consigo recomendar esse curso o suficiente. Estou no trabalho dos meu sonhos e vejo um futuro brilhante!”',
+            foto: './assets/gabriela.jpg'
+        }, {
+            nome: 'João Nogueira',
+            profissao: 'Desenvolvedor Front-end',
+            descricao: '“Se você quiser ter a melhor base possível, recomendo fazer este curso. A profundidade em que os instrutores entram é incrível. Agora me sinto muito confiante em começar como um desenvolvedor profissional.”',
+            foto: './assets/joao.jpg'
+        }];
+
+        function pessoaAnterior() {
+            pessoaAtual = pessoaAtual === 0 ? pessoas.length - 1 : pessoaAtual - 1;
+            NOME.textContent = pessoas[pessoaAtual].nome;
+            IMG.src = pessoas[pessoaAtual].foto;
+            REVI.textContent = pessoas[pessoaAtual].descricao;
+            PROF.textContent = pessoas[pessoaAtual].profissao;
+        };
+        function proximaPessoa() {
+            pessoaAtual = pessoaAtual === pessoas.length - 1 ? 0 : pessoaAtual + 1;
+            NOME.textContent = pessoas[pessoaAtual].nome;
+            IMG.src = pessoas[pessoaAtual].foto;
+            REVI.textContent = pessoas[pessoaAtual].descricao;
+            PROF.textContent = pessoas[pessoaAtual].profissao;
+        };
+
+    </script>
+
+</html>

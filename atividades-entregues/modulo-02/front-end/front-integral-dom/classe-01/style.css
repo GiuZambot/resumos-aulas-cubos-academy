@@ -1,0 +1,304 @@
+:root {
+    --color-dark-blue: hsl(240, 38%, 20%);
+    --color-greyish-blue: hsl(240, 18%, 77%);
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 50%;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 8vw;
+    padding-top: 14vw;
+    background: url(./assets/pattern-bg.svg), url(./assets/pattern-curve.svg);
+    background-position: center 8%, bottom left;
+    background-repeat: no-repeat;
+    background-size: 85%, 80%;
+}
+
+@media only screen and (min-width: 800px) {
+    body {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 0 8rem;
+        background-position: 90% 35%, bottom left;
+        background-size: auto;
+    }
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: 138rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media only screen and (min-width: 800px) {
+    .content-wrapper {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+}
+
+.text-wrapper {
+    position: relative;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+}
+
+.text-wrapper::before {
+    content: url(../assets/pattern-quotes.svg);
+    position: absolute;
+    top: -7rem;
+    left: 50%;
+    -webkit-transform: translate(-50%) scale(0.5);
+    transform: translate(-50%) scale(0.5);
+}
+
+@media only screen and (min-width: 800px) {
+    .text-wrapper::before {
+        top: -8.5rem;
+        left: 11.5rem;
+        -webkit-transform: initial;
+        transform: initial;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .text-wrapper {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+        margin-bottom: -4rem;
+    }
+}
+
+.review-text {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 60rem;
+    margin-bottom: 4rem;
+}
+
+@media only screen and (min-width: 800px) {
+    .review-text {
+        width: 115%;
+        max-width: none;
+    }
+}
+
+.author__content-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media only screen and (min-width: 800px) {
+    .author__content-wrapper {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .author__name {
+        margin-right: 3rem;
+    }
+}
+
+.carousel {
+    position: relative;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    margin-bottom: 10rem;
+}
+
+@media only screen and (min-width: 800px) {
+    .carousel {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+        margin-top: -4rem;
+        margin-bottom: 0;
+    }
+}
+
+.carousel__img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 4px;
+    -webkit-box-shadow: 1rem 6rem 40px -2.5rem rgba(32, 32, 70, 0.2);
+    box-shadow: 1rem 6rem 40px -2.5rem rgba(32, 32, 70, 0.2);
+    outline: 1px solid transparent;
+    padding: 1px;
+    background-clip: content-box;
+}
+
+@media only screen and (min-width: 800px) {
+    .carousel__img {
+        width: 45vw;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .carousel__img {
+        width: auto;
+    }
+}
+
+.carousel__btn-wrapper {
+    position: absolute;
+    left: 50%;
+    bottom: -3rem;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@media only screen and (min-width: 800px) {
+    .carousel__btn-wrapper {
+        left: 8rem;
+        bottom: -3rem;
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+}
+
+.btn {
+    border: none;
+    padding: 1.5rem 1.75rem;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+@media only screen and (min-width: 800px) {
+    .btn {
+        padding: 2.125rem 2.75rem;
+    }
+}
+
+.btn:hover {
+    background-color: #f0f0f0;
+}
+
+.btn:active img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.btn img {
+    width: 1rem;
+}
+
+@media only screen and (min-width: 800px) {
+    .btn img {
+        width: auto;
+    }
+}
+
+.btn--previous {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.btn--next {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+body {
+    color: var(--color-dark-blue);
+    font-family: 'Inter', sans-serif;
+    font-size: 4rem;
+}
+
+.review-text {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+@media only screen and (min-width: 800px) {
+    .review-text {
+        font-size: 3.25rem;
+        text-align: start;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .review-text {
+        font-size: 4rem;
+        line-height: 5.5rem;
+    }
+}
+
+.author__content-wrapper {
+    font-size: 2rem;
+}
+
+@media only screen and (min-width: 1200px) {
+    .author__content-wrapper {
+        font-size: 2.75rem;
+    }
+}
+
+.author__name {
+    font-weight: 700;
+}
+
+.author__title {
+    color: var(--color-greyish-blue);
+    font-weight: 500;
+}

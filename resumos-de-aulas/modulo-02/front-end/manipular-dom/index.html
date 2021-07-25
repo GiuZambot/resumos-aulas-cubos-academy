@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>example Javascript</title>
+        <link rel="stylesheet" type="text/css" href="../../../../www/style.css">
+        <link rel="stylesheet" type="text/css" href="../../../../www/prism.css">
+    </head>
+
+    <body>
+
+        <div class="box">
+            <h3>Execute cada snippet clicando no botão "copiar e executar", verifique no console os resultados, caso queira, copie o código no editor abaixo para alterar o código.</h3>
+            kluhykugikuyku
+            <textarea name="" id="code" cols="25" rows="10" placeholder="Cole ou digite o código aqui, depois clique em Executar."></textarea>
+            <button id="eval">Executar o código acima.</button>
+
+            <pre><code class="language-js">
+// Referência do objeto
+const obj = {a: 1, b: 2};
+console.log(obj);
+const obj2 = obj;
+obj2.a = 4;
+console.log(obj);
+</code></pre>
+
+            <pre><code class="language-js">
+// Copiando objeto
+const obj = {a: 1, b: 2};
+console.log("Obj", obj);
+const obj2 = {...obj};
+obj2.a = 4;
+console.log("Obj", obj);
+console.log("Obj2", obj2);
+    </code></pre>
+
+            <pre><code class="language-js">
+// Diferença entre log e dir
+console.log(document);
+console.dir(document);
+</code></pre>
+
+            <pre id="pre1"><code class="language-js">
+const btn = document.querySelector('.teste1');
+btn.textContent = "Manipulado"; 
+</code></pre>
+            <div class="btn teste1">Teste1</div>
+
+            <pre><code class="language-js">
+const btn = document.querySelector('.teste2');
+btn.textContent = "Manipulado";
+function exemplo(event) { console.log(event.target); };
+btn.addEventListener('click', exemplo);
+</code></pre>
+            <div class="btn teste2">Teste2</div>
+
+            <pre><code class="language-js">
+const btn = document.querySelector('.teste2');
+btn.textContent = "Removido";
+btn.removeEventListener('click', exemplo);
+</code></pre>
+
+            <pre><code class="language-js">
+const btn = document.getElementById('ID1');
+btn.textContent = "Manipulado pelo ID";
+function exemplo(event) { console.log(event.target.id); };
+btn.addEventListener('click', exemplo);
+    </code></pre>
+            <div id="ID1" class="btn">TesteID</div>
+
+            <pre><code class="language-js">
+const btn = document.querySelector('.teste3');
+btn.textContent = "Manipulado";
+
+btn.addEventListener('click', (event) => { console.log(event) } );
+</code></pre>
+            <div class="btn teste3">Teste3</div>
+
+            <pre><code class="language-js">
+const btn = document.querySelector('.teste4');
+btn.textContent = "Manipulado";
+btn.classList.remove("btn");
+</code></pre>
+            <div class="btn teste4">Teste4</div>
+
+            <pre><code class="language-js">
+const btn = document.getElementById('ID2');
+btn.textContent = "Manipulado";
+btn.className = "btn"
+</code></pre>
+            <div id="ID2" class="">Teste5</div>
+
+            <pre><code class="language-js">
+const btn = document.querySelector('.teste6');
+btn.textContent = "Manipulado";
+btn.addEventListener('click', () => { console.log("oi"); }, { once: true });
+</code></pre>
+            <div class="btn teste6">Teste6</div>
+
+
+            <script type="module" src="../../../../www/prism.js" defer></script>
+    </body>
+
+</html>
