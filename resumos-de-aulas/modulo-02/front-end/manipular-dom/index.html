@@ -13,7 +13,6 @@
 
         <div class="box">
             <h3>Execute cada snippet clicando no botão "copiar e executar", verifique no console os resultados, caso queira, copie o código no editor abaixo para alterar o código.</h3>
-            kluhykugikuyku
             <textarea name="" id="code" cols="25" rows="10" placeholder="Cole ou digite o código aqui, depois clique em Executar."></textarea>
             <button id="eval">Executar o código acima.</button>
 
@@ -43,12 +42,15 @@ console.dir(document);
 </code></pre>
 
             <pre id="pre1"><code class="language-js">
-const btn = document.querySelector('.teste1');
+// Manipulando o DOM
+//Pegando elemento pela classe
+const btn = document.querySelector('.teste1'); 
 btn.textContent = "Manipulado"; 
 </code></pre>
             <div class="btn teste1">Teste1</div>
 
             <pre><code class="language-js">
+// Event Listener
 const btn = document.querySelector('.teste2');
 btn.textContent = "Manipulado";
 function exemplo(event) { console.log(event.target); };
@@ -57,12 +59,14 @@ btn.addEventListener('click', exemplo);
             <div class="btn teste2">Teste2</div>
 
             <pre><code class="language-js">
+// Removendo Event Listener
 const btn = document.querySelector('.teste2');
 btn.textContent = "Removido";
 btn.removeEventListener('click', exemplo);
 </code></pre>
 
             <pre><code class="language-js">
+// pegando elemento pelo ID
 const btn = document.getElementById('ID1');
 btn.textContent = "Manipulado pelo ID";
 function exemplo(event) { console.log(event.target.id); };
@@ -71,6 +75,7 @@ btn.addEventListener('click', exemplo);
             <div id="ID1" class="btn">TesteID</div>
 
             <pre><code class="language-js">
+// Event Listener com função anônima
 const btn = document.querySelector('.teste3');
 btn.textContent = "Manipulado";
 
@@ -79,6 +84,7 @@ btn.addEventListener('click', (event) => { console.log(event) } );
             <div class="btn teste3">Teste3</div>
 
             <pre><code class="language-js">
+// Uso de classList (adicionando e removendos classes CSS)
 const btn = document.querySelector('.teste4');
 btn.textContent = "Manipulado";
 btn.classList.remove("btn");
@@ -86,6 +92,7 @@ btn.classList.remove("btn");
             <div class="btn teste4">Teste4</div>
 
             <pre><code class="language-js">
+// ClassName
 const btn = document.getElementById('ID2');
 btn.textContent = "Manipulado";
 btn.className = "btn"
@@ -93,6 +100,7 @@ btn.className = "btn"
             <div id="ID2" class="">Teste5</div>
 
             <pre><code class="language-js">
+// Opção once do Event Listener
 const btn = document.querySelector('.teste6');
 btn.textContent = "Manipulado";
 btn.addEventListener('click', () => { console.log("oi"); }, { once: true });
