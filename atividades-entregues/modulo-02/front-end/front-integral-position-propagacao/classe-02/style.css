@@ -1,0 +1,50 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic);
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #E6E3CA;
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.modalBox {
+    position: absolute;
+    bottom: 85px;
+    right: 85px;
+}
+
+.modal {
+    position: absolute;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 40px 50px;
+    width: 450px;
+    top: -550px;
+    left: -430px;
+}
+
+.modal h1 {
+    font-size: 42px;
+    line-height: 57px;
+    margin-bottom: 40px;
+}
+
+.modal h2 {
+    font-size: 30px;
+    line-height: 41px;
+    margin-bottom: 12px;
+}
+
+.modal p {
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 40px;
+}
+
+.escondido {
+    display: none;
+}

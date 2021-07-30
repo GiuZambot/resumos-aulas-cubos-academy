@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+body {
+    background-color: #EFDADA;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.box {
+    background-color: white;
+    width: 470px;
+    height: 460px;
+    padding: 40px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form label {
+    margin-bottom: 12px;
+}
+
+.form input {
+    border: 1px solid #4E4E4E;
+    width: 350px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.senha {
+    position: relative;
+}
+
+.senha img {
+    position: absolute;
+    width: 20px;
+    right: 15px;
+    top: 17px
+}
+
+.btn {
+    color: white;
+    width: 111px;
+    height: 42px;
+    background: #13A1F0;
+    border: 0px;
+    border-radius: 8px;
+}
