@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <script src="./script.js" defer></script>
+    </head>
+
+    <body>
+        <h1>Revisão 02</h1>
+        <div>
+            <h2>GET</h2>
+            <form action="http://localhost/alunos" method="GET" target="_blank">
+                <input type="submit" value="Pesquisar">
+            </form>
+        </div>
+        <div>
+            <h2>GET ID</h2>
+            <form action="http://localhost/alunos" method="GET" target="_blank">
+                <input type="number" name="id" id="id">
+                <input type="submit" value="Pesquisar">
+            </form>
+        </div>
+        <div>
+            <h2>POST</h2>
+            <form action="http://localhost/alunos" method="POST" target="blank">
+                <input hidden type="text" name="formulario" id="formulario" value="post">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" value="Giu" required>
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" name="sobrenome" id="sobrenome" value="Zambot">
+                <label for="idade">Idade</label>
+                <input type="number" name="idade" id="idade" value="41">
+                <label for="curso">Curso</label>
+                <select name="curso" id="curso">
+                    <option value="PDZ">PDZ</option>
+                    <option value="Flutter">Flutter</option>
+                    <option value="Produto">Produto</option>
+                    <option value="UX/UI">UX/UI</option>
+                </select>
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" value="senha123" required>
+                <input type="submit" value="Cadastrar">
+            </form>
+        </div>
+
+    </body>
+
+</html>
