@@ -64,11 +64,12 @@ main h1 {
 
 .galeria {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .galeria img {
-    width: 150px;
+    width: 200px;
 }
 
 .galeria .like {
@@ -106,7 +107,7 @@ main h1 {
 }
 
 .modal {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
