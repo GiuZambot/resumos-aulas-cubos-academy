@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+}
+
+header {
+    width: 28px;
+    position: fixed;
+    z-index: 1;
+    padding: 10px 10px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: darkslategrey;
+    transition: all 0.5s ease;
+}
+
+.header_aberto {
+    width: 150px;
+}
+
+header nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header nav div {
+    color: aliceblue;
+    display: flex;
+    overflow: hidden;
+}
+
+header h2 {
+    margin-left: 15px;
+}
+
+.inicio,
+.favoritos,
+.config {
+    min-width: 50px;
+}
+
+.config {
+    margin-top: auto;
+}
+
+main {
+    width: 100%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+main h1 {
+    align-self: center;
+    margin: 80px 0px 20px 0px;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.galeria img {
+    width: 150px;
+}
+
+.galeria .like {
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.galeria>div {
+    position: relative;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease-out;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.galeria>div:hover {
+    transform: perspective(300px) rotateY(25deg);
+}
+
+.galeria div div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.galeria h2 {
+    font-size: 11px;
+}
+
+.galeria p {
+    font-size: 10px;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.modal div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.modal div div {
+    position: relative;
+}
+
+.modal_fechar {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transition: all 0.5s ease;
+}
+
+.modal_fechar:hover {
+    transform: rotate(15deg);
+}
+
+.modal_prev,
+.modal_next {
+    padding: 30px;
+    transition: all 0.5s ease;
+}
+
+.modal_prev:hover,
+.modal_next:hover {
+    transform: scale(0.95);
+    transform: perspective(400px) rotateY(45deg);
+}
+
+.modal_like {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.hidden {
+    display: none !important;
+}
