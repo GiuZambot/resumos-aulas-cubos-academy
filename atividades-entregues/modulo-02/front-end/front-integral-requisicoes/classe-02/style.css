@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 100%;
+}
