@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CubosFlix</title>
+    <link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <img src="./assets/logo.svg" alt="Logo">
+      <h1 class="header__title">Cubos Flix</h1>
+      <img class="btn-theme" src="./assets/light-mode.svg" alt="Botão de tema">
+    </header>
+    <div class="container">
+      <input class="input" type="text" placeholder="Pesquisar...">
+      <div class="movies-container">
+        <img class="btn-prev" src="./assets/seta-esquerda-preta.svg" alt="Seta esquerda">
+        <div class="movies">
+          <div class="movie">
+            <div class="movie__info">
+              <span class="movie__title"></span>
+              <span class="movie__rating">
+                <img src="./assets/estrela.svg" alt="Estrela">
+              </span>
+            </div>
+          </div>
+        </div>
+        <img class="btn-next" src="./assets/seta-direita-preta.svg" alt="Seta direita">
+      </div>
+      <h2 class="subtitle">Highlight do dia</h2>
+      <div class="highlight">
+        <a class="highlight__video-link" href="#" target="_blank">
+          <div class="highlight__video">
+            <img src="./assets/play.svg" alt="Play">
+          </div>
+        </a>
+        <div class="highlight__info">
+          <div class="highlight__title-rating">
+            <h3 class="highlight__title"></h3>
+            <span class="highlight__rating"></span>
+          </div>
+          <div class="highlight__genre-launch">
+            <span class="highlight__genres"></span>
+            /
+            <span class="highlight__launch"></span>
+          </div>
+          <p class="highlight__description">
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="modal hidden">
+      <img src="./assets/close.svg" alt="Close" class="modal__close">
+      <h3 class="modal__title"></h3>
+      <img class="modal__img">
+      <p class="modal__description">
+      </p>
+      <div class="modal__genre-average">
+        <div class="modal__genres"></div>
+        <div class="modal__average"></div>
+      </div>
+    </div>
+  </body>
+
+</html>

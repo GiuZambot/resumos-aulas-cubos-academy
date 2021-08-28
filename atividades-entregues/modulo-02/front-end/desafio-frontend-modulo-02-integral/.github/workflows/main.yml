@@ -1,0 +1,75 @@
+name: Cypress Tests
+
+on: [pull_request]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - uses: suisei-cn/actions-download-file@v1
+        id: pluginsindex  # Remember to give an ID if you need the output filename
+        name: Plugins Index
+        with:
+          url: "https://test-mod2-back.web.app/front-tests/plugins/index.js"
+          target: cypress/plugins/
+      # =========================================================================
+      - uses: suisei-cn/actions-download-file@v1
+        id: supportindex  # Remember to give an ID if you need the output filename
+        name: Support Index
+        with:
+          url: "https://test-mod2-back.web.app/front-tests/support/index.js"
+          target: cypress/support/
+      # =========================================================================
+      - uses: suisei-cn/actions-download-file@v1
+        id: commands  # Remember to give an ID if you need the output filename
+        name: Commands
+        with:
+          url: "https://test-mod2-back.web.app/front-tests/commands.js"
+          target: cypress/support/
+      # =========================================================================
+      - uses: suisei-cn/actions-download-file@v1
+        id: highlightmovie  # Remember to give an ID if you need the output filename
+        name: Highlight Movie
+        with:
+          url: "https://test-mod2-back.web.app/front-tests/highlight-movie.json"
+          target: cypress/fixtures/
+      # =========================================================================
+      - uses: suisei-cn/actions-download-file@v1
+        id: basemovies  # Remember to give an ID if you need the output filename
+        name: Base movies
+        with:
+          url: "https://test-mod2-back.web.app/front-tests/base-movies.json"
+          target: cypress/fixtures/
+      # =========================================================================
+      - uses: suisei-cn/actions-download-file@v1
+        id: matrixsearch  # Remember to give an ID if you need the output filename
+        name: Matrix Search
+        with:
+          url: "https://test-mod2-back.web.app/front-tests/matrix-search.json"
+          target: cypress/fixtures/
+      # =========================================================================
+      - uses: suisei-cn/actions-download-file@v1
+        id: testsspecjs  # Remember to give an ID if you need the output filename
+        name: Test Spec 
+        with:
+          url: "https://test-mod2-back.web.app/front-tests/tests.spec.js"
+          target: cypress/integration/
+      # =========================================================================
+      - uses: suisei-cn/actions-download-file@v1
+        id: highlightvideo  # Remember to give an ID if you need the output filename
+        name: HighLight Video
+        with:
+          url: "https://test-mod2-back.web.app/front-tests/highlight-video.json"
+          target: cypress/fixtures/
+      # =========================================================================
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          # Linux and MacOS
+          start: npm start
+          # Takes precedences on Windows
+          start-windows: npm run start:windows:server

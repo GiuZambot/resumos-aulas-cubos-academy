@@ -7,7 +7,7 @@ const fs = require('fs');
 // });
 
 const lineReader = require('line-reader');
-lineReader.eachLine('./teste.txt', function (line, last) {
+lineReader.eachLine('./teste.txt', function(line, last) {
     console.log(line);
     return false;
 });
@@ -62,7 +62,7 @@ agendado = setInterval(() => {
     contagem < 0 ? (console.log("BOOOMMMM"), clearInterval(agendado)) : false;
 }, 300);
 
-escrevendo arquivo
+//escrevendo arquivo
 fs.writeFile("./logs.txt", "Log", () => {
     console.log("Arquivo salvo ");
 });
@@ -91,8 +91,7 @@ const indexOfTxt = arrTxt.findIndex(x => x.length > 10);
 
 indexOfTxt != -1 ? console.log(indexOfTxt) : console.log("Não econtrado");
 
-const pessoa = [
-    {
+const pessoa = [{
         nome: "José",
         idade: 30,
         altura: 173

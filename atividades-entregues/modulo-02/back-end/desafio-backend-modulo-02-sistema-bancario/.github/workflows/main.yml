@@ -1,0 +1,87 @@
+name: Jest Tests
+
+on: [pull_request, pull_request_target]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [15.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - uses: suisei-cn/actions-download-file@v1
+        id: downloadfile  # Remember to give an ID if you need the output filename
+        name: Download the file
+        with:
+          url: "https://test-mod2-back.web.app/tests/integracao/contas/contas.atualizar-usuario.test.js"
+          target: src/tests/integracao/contas
+      - uses: suisei-cn/actions-download-file@v1
+        id: downloadfile2  # Remember to give an ID if you need the output filename
+        name: Download the file
+        with:
+          url: "https://test-mod2-back.web.app/tests/integracao/contas/contas.criar.test.js"
+          target: src/tests/integracao/contas
+      - uses: suisei-cn/actions-download-file@v1
+        id: downloadfile3  # Remember to give an ID if you need the output filename
+        name: Download the file
+        with:
+          url: "https://test-mod2-back.web.app/tests/integracao/contas/contas.excluir.test.js"
+          target: src/tests/integracao/contas
+      - uses: suisei-cn/actions-download-file@v1
+        id: downloadfile4  # Remember to give an ID if you need the output filename
+        name: Download the file
+        with:
+          url: "https://test-mod2-back.web.app/tests/integracao/contas/contas.listar.test.js"
+          target: src/tests/integracao/contas
+      - uses: suisei-cn/actions-download-file@v1
+        id: downloadfile5  # Remember to give an ID if you need the output filename
+        name: Download the file
+        with:
+          url: "https://test-mod2-back.web.app/tests/integracao/transacoes/transacoes.depositar.test.js"
+          target: src/tests/integracao/transacoes
+      - uses: suisei-cn/actions-download-file@v1
+        id: downloadfile9  # Remember to give an ID if you need the output filename
+        name: Download the file
+        with:
+          url: "https://test-mod2-back.web.app/tests/integracao/transacoes/transacoes.extrato.test.js"
+          target: src/tests/integracao/transacoes
+      - uses: suisei-cn/actions-download-file@v1
+        id: downloadfile8  # Remember to give an ID if you need the output filename
+        name: Download the file
+        with:
+          url: "https://test-mod2-back.web.app/tests/integracao/transacoes/transacoes.sacar.test.js"
+          target: src/tests/integracao/transacoes
+      - uses: suisei-cn/actions-download-file@v1
+        id: downloadfile7  # Remember to give an ID if you need the output filename
+        name: Download the file
+        with:
+          url: "https://test-mod2-back.web.app/tests/integracao/transacoes/transacoes.saldo.test.js"
+          target: src/tests/integracao/transacoes
+      - uses: suisei-cn/actions-download-file@v1
+        id: downloadfile6  # Remember to give an ID if you need the output filename
+        name: Download the file
+        with:
+          url: "https://test-mod2-back.web.app/tests/integracao/transacoes/transacoes.transferencia.test.js"
+          target: src/tests/integracao/transacoes
+      - uses: suisei-cn/actions-download-file@v1
+        id: downloadfile10  # Remember to give an ID if you need the output filename
+        name: Download the file
+        with:
+          url: "https://test-mod2-back.web.app/tests/utils/resetDB.js"
+          target: src/tests/utils
+      - uses: suisei-cn/actions-download-file@v1
+        id: downloadfile11  # Remember to give an ID if you need the output filename
+        name: Download the file
+        with:
+          url: "https://test-mod2-back.web.app/tests/validacoes/extratoSchema.js"
+          target: src/tests/validacoes
+      - run: npm test

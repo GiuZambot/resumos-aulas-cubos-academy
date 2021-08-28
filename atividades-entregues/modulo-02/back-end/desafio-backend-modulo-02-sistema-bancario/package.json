@@ -1,0 +1,25 @@
+{
+  "name": "desafio-backend-modulo-02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./src/index.js",
+    "test": "jest --watchAll=false --noStackTrace"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "swagger-autogen": "^2.11.2",
+    "swagger-ui-express": "^4.1.6",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "jest-fail-on-console": "^2.0.4",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.5"
+  }
+}
