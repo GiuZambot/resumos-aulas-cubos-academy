@@ -12,7 +12,7 @@ const atualizarUsuarioConta = (req, res) => {
     // Conta não encontrada
     const cliente = contas.findIndex(n => n.numero === req.params.numeroConta);
     if (cliente === -1) {
-        res.status(404).json({ mensagem: 'Conta não encontrada! Nada atualisado.' });
+        res.status(400).json({ mensagem: 'Conta não encontrada! Nada atualizado.' });
         return;
     }
 

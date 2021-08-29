@@ -9,19 +9,14 @@ const transferir = (req, res) => {
         return;
     }
 
-    // Verificar existência da conta
     const cliente = getCliente(req.body.numero_conta);
-    if (cliente === -1) {
-        res.status(404).json({ mensagem: 'Conta não encontrada! Saque não realizado.' });
-        return;
-    }
 
     // Senha já verificada em controledepermissoes.js
 
     // Verificar existência da conta de destino
     const clienteDestino = contas.findIndex(n => n.numero === req.body.numero_conta_destino);
     if (clienteDestino === -1) {
-        res.status(404).json({ mensagem: 'Conta do destinatário não encontrada! Transferência não realizadao.' });
+        res.status(400).json({ mensagem: 'Conta do destinatário não encontrada! Transferência não realizadao.' });
         return;
     }
 
@@ -36,7 +31,7 @@ const transferir = (req, res) => {
 
     // Verificar saldo suficiente
     if (contas[cliente].saldo < valor) {
-        res.status(404).json({ mensagem: 'Saldo insuficiente para a transferÊncia com valor informado.' });
+        res.status(400).json({ mensagem: 'Saldo insuficiente para a transferÊncia com valor informado.' });
         return;
     }
 

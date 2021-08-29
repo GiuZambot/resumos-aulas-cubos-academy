@@ -1,6 +1,7 @@
 name: Cypress Tests
 
-on: [pull_request]
+on: [pull_request, pull_request_target]
+
 
 jobs:
   cypress-run:
@@ -73,3 +74,5 @@ jobs:
           start: npm start
           # Takes precedences on Windows
           start-windows: npm run start:windows:server
+
+

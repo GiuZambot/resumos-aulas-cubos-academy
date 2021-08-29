@@ -20,16 +20,7 @@
       <input class="input" type="text" placeholder="Pesquisar...">
       <div class="movies-container">
         <img class="btn-prev" src="./assets/seta-esquerda-preta.svg" alt="Seta esquerda">
-        <div class="movies">
-          <div class="movie">
-            <div class="movie__info">
-              <span class="movie__title"></span>
-              <span class="movie__rating">
-                <img src="./assets/estrela.svg" alt="Estrela">
-              </span>
-            </div>
-          </div>
-        </div>
+        <div class="movies"></div>
         <img class="btn-next" src="./assets/seta-direita-preta.svg" alt="Seta direita">
       </div>
       <h2 class="subtitle">Highlight do dia</h2>
@@ -56,15 +47,17 @@
     </div>
     <div class="modal hidden">
       <img src="./assets/close.svg" alt="Close" class="modal__close">
-      <h3 class="modal__title"></h3>
-      <img class="modal__img">
-      <p class="modal__description">
-      </p>
-      <div class="modal__genre-average">
-        <div class="modal__genres"></div>
-        <div class="modal__average"></div>
+      <div class="modal__box">
+        <h3 class="modal__title"></h3>
+        <img class="modal__img">
+        <p class="modal__description"></p>
+        <div class="modal__genre-average">
+          <div class="modal__genres"></div>
+          <div class="modal__average"></div>
+        </div>
       </div>
     </div>
+    <footer></footer>
   </body>
 
 </html>

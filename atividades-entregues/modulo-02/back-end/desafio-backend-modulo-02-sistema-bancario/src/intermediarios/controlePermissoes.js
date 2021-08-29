@@ -8,7 +8,7 @@ function controlePermissoes(req, res, next) {
     switch (req._parsedUrl.pathname) {
         case "/contas":
             if (req.method === "GET" && req.query.senha_banco !== "Cubos123Bank") {
-                res.status(404).json({ mensagem: "Autenticação da gerência requerida para essa ação." });
+                res.status(400).json({ mensagem: "Autenticação da gerência requerida para essa ação." });
             } else {
                 next();
             }
@@ -20,9 +20,9 @@ function controlePermissoes(req, res, next) {
         case "/transacoes/transferir":
             // Vericando existência e senha do cliente
             if (getCliente(conta) === -1) {
-                res.status(404).json({ mensagem: 'Conta não encontrada!' });
+                res.status(400).json({ mensagem: 'Conta não encontrada!' });
             } else if (verificarSenhaCliente(conta, senha)) {
-                res.status(404).json({ mensagem: "Senha inválida para essa conta." });
+                res.status(400).json({ mensagem: "Senha inválida para essa conta." });
             } else {
                 next();
             }

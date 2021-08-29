@@ -21,7 +21,7 @@ const depositar = (req, res) => {
     // Verificar existência da conta
     const cliente = contas.findIndex(n => n.numero === req.body.numero_conta);
     if (cliente === -1) {
-        res.status(404).json({ mensagem: 'Conta não encontrada! Depósito não realizado.' });
+        res.status(400).json({ mensagem: 'Conta não encontrada! Depósito não realizado.' });
         return;
     }
 
