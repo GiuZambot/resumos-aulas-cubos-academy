@@ -16,6 +16,8 @@ const btnTheme = document.querySelector('.btn-theme');
 let tema = localStorage.getItem('tema');
 tema = tema ? tema : 'light';
 localStorage.setItem('tema', tema);
+btnTheme.src =
+    tema === 'light' ? "./assets/light-mode.svg" : "./assets/dark-mode.svg";
 document.body.style.
     setProperty('--color-back', tema === 'light' ? '#FFF' : '#242424');
 document.body.style.
@@ -32,6 +34,7 @@ const trocarTema = () => {
     if (tema === 'light') {
         localStorage.setItem('tema', 'dark');
         tema = 'dark';
+        btnTheme.src = "./assets/dark-mode.svg";
         document.body.style.setProperty('--color-back', '#242424');
         document.body.style.setProperty('--color-highlight', '#FFF');
         document.body.style.setProperty('--color-hl-info', '#454545');
@@ -39,6 +42,7 @@ const trocarTema = () => {
     } else {
         tema = 'light';
         localStorage.setItem('tema', 'light');
+        btnTheme.src = "./assets/light-mode.svg";
         document.body.style.setProperty('--color-back', '#FFF');
         document.body.style.setProperty('--color-highlight', '#000');
         document.body.style.setProperty('--color-hl-info', '#FFF');
