@@ -13,7 +13,7 @@ WHERE compositor IS NOT NULL AND tempo < 5 * 60
 
 5 - Selecione as composições e o tempo de cada composição, de todos os registros da tabela musicas, onde o compositor seja Mozart ou Bach.
 SELECT composicao, tempo FROM "musicas"
-WHERE compositor = 'Mozart' OR compositor = 'Bach' 
+WHERE compositor != 'Mozart' OR compositor != 'Bach' 
 
 6 - Selecione todos os registros com todos os campos da tabela musicas e faça uma ordenação pelo identificador em ordem decrescente.
 SELECT * FROM "musicas"
@@ -44,8 +44,8 @@ SELECT * FROM "musicas"
 OFFSET 5 * 12 LIMIT 12
 
 13 - Selecione todos os compositores da tabela musicas de forma que os resultados não sejam repetidos e não esteja nulo.
-SELECT DISTINCT compositor FROM "musicas"
-WHERE compositor IS NOT NULL
+SELECT DISTINCT compositor FROM 'musicas'
+WHERE compositor != 'Bach'
 
 14 - Selecione os compositores e as composições da tabela musicas de forma que os resultados não sejam repetidos.
 SELECT DISTINCT compositor, composicao FROM "musicas"
