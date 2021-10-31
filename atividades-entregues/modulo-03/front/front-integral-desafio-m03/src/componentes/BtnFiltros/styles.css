@@ -1,0 +1,36 @@
+.container-chip {
+  width: 80px;
+  height: 20px;
+  box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.container-chip:hover {
+  box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.4);
+}
+
+.container-chip span {
+  font-family: 'Rubik';
+  font-size: 12px;
+  margin-left: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.icon-filter {
+  margin-right: 8px;
+  width: 8px;
+  height: 8px;
+}
+
+.selected {
+  background-color: #7B61FF;
+  color: #ffffff;
+}

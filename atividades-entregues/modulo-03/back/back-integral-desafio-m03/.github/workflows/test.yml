@@ -1,0 +1,102 @@
+name: Test
+
+on: [pull_request, workflow_dispatch]
+
+jobs:
+    Test:
+        runs-on: ubuntu-latest
+        services:
+            postgres:
+                image: postgres:12-alpine
+                env:
+                    POSTGRES_USER: postgres
+                    POSTGRES_PASSWORD: postgres
+                    POSTGRES_HOST_AUTH_METHOD: trust
+                options: >-
+                    --health-cmd pg_isready
+                    --health-interval 10s
+                    --health-timeout 5s
+                    --health-retries 5
+                ports:
+                    - 5432:5432
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: 14.x
+            - run: npm ci
+            - run: npm i bcrypt
+            - run: npm i supertest
+            - uses: suisei-cn/actions-download-file@v1
+              id: downloadfile0  # Remember to give an ID if you need the output filename
+              name: Download the file
+              with:
+                url: "https://storage.googleapis.com/pedagogico/desafioM03/src/conexao.js"
+                target: src
+            - uses: suisei-cn/actions-download-file@v1
+              id: downloadfile1  # Remember to give an ID if you need the output filename
+              name: Download the file
+              with:
+                url: "https://storage.googleapis.com/pedagogico/desafioM03/tests/setup.js"
+                target: src/tests
+            - uses: suisei-cn/actions-download-file@v1
+              id: downloadfile2  # Remember to give an ID if you need the output filename
+              name: Download the file
+              with:
+                url: "https://storage.googleapis.com/pedagogico/desafioM03/tests/util/database-util.js"
+                target: src/tests/util
+            - uses: suisei-cn/actions-download-file@v1
+              id: downloadfile3  # Remember to give an ID if you need the output filename
+              name: Download the file
+              with:
+                url: "https://storage.googleapis.com/pedagogico/desafioM03/tests/integracao/usuarios/atualizacao.test.js"
+                target: src/tests/integracao/usuarios
+            - uses: suisei-cn/actions-download-file@v1
+              id: downloadfile4  # Remember to give an ID if you need the output filename
+              name: Download the file
+              with:
+                url: "https://storage.googleapis.com/pedagogico/desafioM03/tests/integracao/usuarios/cadastro.test.js"
+                target: src/tests/integracao/usuarios
+            - uses: suisei-cn/actions-download-file@v1
+              id: downloadfile5  # Remember to give an ID if you need the output filename
+              name: Download the file
+              with:
+                url: "https://storage.googleapis.com/pedagogico/desafioM03/tests/integracao/usuarios/detalhes.test.js"
+                target: src/tests/integracao/usuarios
+            - uses: suisei-cn/actions-download-file@v1
+              id: downloadfile6  # Remember to give an ID if you need the output filename
+              name: Download the file
+              with:
+                url: "https://storage.googleapis.com/pedagogico/desafioM03/tests/integracao/usuarios/login.test.js"
+                target: src/tests/integracao/usuarios
+            - uses: suisei-cn/actions-download-file@v1
+              id: downloadfile7  # Remember to give an ID if you need the output filename
+              name: Download the file
+              with:
+                url: "https://storage.googleapis.com/pedagogico/desafioM03/tests/integracao/produtos/atualizacao.test.js"
+                target: src/tests/integracao/produtos
+            - uses: suisei-cn/actions-download-file@v1
+              id: downloadfile8  # Remember to give an ID if you need the output filename
+              name: Download the file
+              with:
+                url: "https://storage.googleapis.com/pedagogico/desafioM03/tests/integracao/produtos/cadastro.test.js"
+                target: src/tests/integracao/produtos
+            - uses: suisei-cn/actions-download-file@v1
+              id: downloadfile9  # Remember to give an ID if you need the output filename
+              name: Download the file
+              with:
+                url: "https://storage.googleapis.com/pedagogico/desafioM03/tests/integracao/produtos/detalhes.test.js"
+                target: src/tests/integracao/produtos
+            - uses: suisei-cn/actions-download-file@v1
+              id: downloadfile10  # Remember to give an ID if you need the output filename
+              name: Download the file
+              with:
+                url: "https://storage.googleapis.com/pedagogico/desafioM03/tests/integracao/produtos/exclusao.test.js"
+                target: src/tests/integracao/produtos
+            - uses: suisei-cn/actions-download-file@v1
+              id: downloadfile11  # Remember to give an ID if you need the output filename
+              name: Download the file
+              with:
+                url: "https://storage.googleapis.com/pedagogico/desafioM03/tests/integracao/produtos/listagem.test.js"
+                target: src/tests/integracao/produtos
+            - run: npx jest --runInBand --verbose --setupFilesAfterEnv ./src/tests/setup.js

@@ -1,0 +1,9 @@
+.container-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-empty {
+  margin-bottom: 15px;
+}

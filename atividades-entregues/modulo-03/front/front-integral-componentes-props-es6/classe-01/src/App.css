@@ -22,15 +22,16 @@ p {
 
 .btn-ok { 
     border-radius: 5px;
+    border: 3px solid red;
     text-decoration: none;
-    color: white;
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.35);
+    color: hsla(255, 255, 255, 0.76);
+    box-shadow: 0px 2px 3px hsva(39, 78, 92);
     max-width: 200px;
     padding: 15px 0;
     margin: 0 auto;
-
+    text-transform: uppercase;
 }
-
+a:visited
 .btn-vermelho{
     background-color: #ED6755;
 }

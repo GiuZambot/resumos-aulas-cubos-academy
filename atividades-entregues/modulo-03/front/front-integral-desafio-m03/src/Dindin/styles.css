@@ -1,0 +1,19 @@
+.container-dashboard {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  position: relative;
+  border-radius: 60px 60px 0px 0px;
+  top: -120px;
+  padding-top: 55px;
+  gap: 40px;
+}
+
+.aside-right {
+  margin-top: 70px;
+}

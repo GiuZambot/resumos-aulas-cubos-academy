@@ -1,0 +1,10 @@
+.container-report {
+  padding: 40px;
+  border: 1px solid rgb(182, 179, 179);
+}
+
+.report-item {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}

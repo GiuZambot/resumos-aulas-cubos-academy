@@ -1,0 +1,25 @@
+.left {
+  background-color: #263184;
+  height: 100vh;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.left h1 {
+  color: white;
+  margin-bottom: 50px;
+}
+
+.left input {
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.left button {
+  margin-top: 20px;
+  width: 320px;
+  cursor: pointer;
+}

@@ -1,0 +1,18 @@
+form {    
+    width: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+input {
+    margin: 0;        
+    padding: 10px;
+}
+
+input[type=submit] {
+    margin-top: 10px;;
+}

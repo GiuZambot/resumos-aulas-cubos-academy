@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  input {
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #555555;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  button {
+    font-family: 'Rubik', sans-serif;
+  }
+
+  .purple {
+    color: #7B61FF
+  }
+  
+  .orange {
+    color: #FA8C10
+  }
+  
+  .light-blue {
+    color: #3A9FF1;
+  }
+  
+  .light-red {
+    color: #FF576B;
+  }
+
+  .bold{
+    font-weight: bold;
+  }
+  
+.modal-container {
+    border-radius: 12px;
+    position: absolute;
+    background-color: #fefefe;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 500px;
+    height: 700px;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+  
+  .full-height {
+    height: 100%;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .vertical-line {
+    width: 1px;
+    background-color: #EAEAEA;
+  }

@@ -1,0 +1,41 @@
+.table {
+  width: 950px;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.table-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-line {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.line-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+  height: 55px;
+}
+
+.edit-icon {
+  margin-right: 20px;
+  width: 18px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  width: 18px;
+  cursor: pointer;
+}
+
+.action-buttons {
+  position: relative;
+}

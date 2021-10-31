@@ -1,0 +1,26 @@
+.table-head {
+  height: 45px;
+  background: #FAFAFA;
+  box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.column-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 150px;
+}
+
+.column-title span {
+  margin-right: 5px;
+}
+
+.order-column {
+  width: 10px;
+  margin-top: 5px;
+}

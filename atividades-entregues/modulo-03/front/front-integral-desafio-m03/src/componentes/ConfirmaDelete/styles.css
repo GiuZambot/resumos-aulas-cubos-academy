@@ -1,0 +1,53 @@
+.container-confirm-delete {
+  position: absolute;
+  top: 45px;
+  left: 80px;
+  width: 120px;
+  height: 50px;
+  padding: 7px;
+  margin: 5px;
+  background: #E4F2FD;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.container-confirm-delete span {
+  display: block;
+  font-size: 10px;
+  font-family: 'Rubik';
+  font-weight: 300;
+  margin: 8px;
+}
+
+.btn-actions-confirm-delete {
+  margin: 0px 3px 0px 3px;
+  padding: 5px;
+  width: 40px;
+  border: none;
+  border-radius: 7px;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.btn-actions-confirm-delete:hover {
+  opacity: 0.8;
+}
+
+.blue {
+  background-color: #3A9FF1;
+}
+
+.red {
+  background-color: #FF576B;
+}
+
+.arrow-up {
+  position: absolute;
+  top: -10px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid #E4F2FD;
+}

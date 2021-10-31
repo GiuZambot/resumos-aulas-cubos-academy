@@ -1,0 +1,265 @@
+name: Cypress Tests
+
+on: [pull_request]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+     
+     
+      - uses: suisei-cn/actions-download-file@v1
+        id: pluginsindex  # Remember to give an ID if you need the output filename
+        name: Plugins Index
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/plugins/index.js"
+          target: cypress/plugins/
+      # =========================================================================
+
+
+      - uses: suisei-cn/actions-download-file@v1
+        id: supportindex  # Remember to give an ID if you need the output filename
+        name: Support Index
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/support/index.js"
+          target: cypress/support/
+      # =========================================================================
+
+
+      - uses: suisei-cn/actions-download-file@v1
+        id: commands  # Remember to give an ID if you need the output filename
+        name: Commands
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/support/commands.js"
+          target: cypress/support/
+      # =========================================================================
+
+
+      - uses: suisei-cn/actions-download-file@v1
+        id: DefaultTransactions  # Remember to give an ID if you need the output filename
+        name: Default Transaction
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/fixtures/transactions.json"
+          target: cypress/fixtures/
+     
+      # =========================================================================
+
+      - uses: suisei-cn/actions-download-file@v1
+        id: TransactionsOrderBy  # Remember to give an ID if you need the output filename
+        name: Transactions Order By 
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/fixtures/transactions-order-by.json"
+          target: cypress/fixtures/
+     
+      # =========================================================================
+
+
+      - uses: suisei-cn/actions-download-file@v1
+        id: TransactionsInsertTwo  # Remember to give an ID if you need the output filename
+        name: Transactions Insert Two 
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/fixtures/transactions-insert-two.json"
+          target: cypress/fixtures/
+     
+      # =========================================================================
+
+
+      - uses: suisei-cn/actions-download-file@v1
+        id: TransactionsInsertOne  # Remember to give an ID if you need the output filename
+        name: Transactions Insert One 
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/fixtures/transactions-insert-one.json"
+          target: cypress/fixtures/
+     
+      # =========================================================================
+
+
+      - uses: suisei-cn/actions-download-file@v1
+        id: TransactionsAfterEditTwo  # Remember to give an ID if you need the output filename
+        name: Transactions After Edit Two 
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/fixtures/transactions-after-edit-two.json"
+          target: cypress/fixtures/
+     
+      # =========================================================================
+
+      - uses: suisei-cn/actions-download-file@v1
+        id: TransactionsAfterEditOne  # Remember to give an ID if you need the output filename
+        name: Transactions After Edit One
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/fixtures/transactions-after-edit-one.json"
+          target: cypress/fixtures/
+     
+      # =========================================================================
+
+
+      - uses: suisei-cn/actions-download-file@v1
+        id: TransactionsAfterDeleteTwo  # Remember to give an ID if you need the output filename
+        name: Transactions After Delete Two
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/fixtures/transactions-after-delete-two.json"
+          target: cypress/fixtures/
+     
+      # =========================================================================
+
+
+      - uses: suisei-cn/actions-download-file@v1
+        id: TransactionsAfterDeleteOne  # Remember to give an ID if you need the output filename
+        name: Transactions After Delete One
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/fixtures/transactions-after-delete-one.json"
+          target: cypress/fixtures/
+     
+      # =========================================================================
+
+
+      - uses: suisei-cn/actions-download-file@v1
+        id: ApplyFiltersSpec  # Remember to give an ID if you need the output filename
+        name: Apply Filters Spec 
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/integration/apply-filters-table.spec.js"
+          target: cypress/integration/     
+      # =========================================================================
+      
+      - uses: suisei-cn/actions-download-file@v1
+        id: ButtonFiltersSpec  # Remember to give an ID if you need the output filename
+        name: Button Filters Spec 
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/integration/button-filters.spec.js"
+          target: cypress/integration/     
+      # =========================================================================
+
+
+      - uses: suisei-cn/actions-download-file@v1
+        id: ChipSpec  # Remember to give an ID if you need the output filename
+        name: Chip Spec 
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/integration/chip.spec.js"
+          target: cypress/integration/     
+      # =========================================================================
+
+
+      - uses: suisei-cn/actions-download-file@v1
+        id: ConfirmDeleteSpec  # Remember to give an ID if you need the output filename
+        name: Confirm Delete Spec 
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/integration/confirm-delete.spec.js"
+          target: cypress/integration/     
+      # =========================================================================
+
+
+      - uses: suisei-cn/actions-download-file@v1
+        id: DashboardSpec  # Remember to give an ID if you need the output filename
+        name: Dashboard Spec 
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/integration/dashboard.spec.js"
+          target: cypress/integration/     
+      # =========================================================================
+
+      
+      - uses: suisei-cn/actions-download-file@v1
+        id: DeleteTransactionSpec  # Remember to give an ID if you need the output filename
+        name: Delete Transaction Spec 
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/integration/delete-transaction.spec.js"
+          target: cypress/integration/     
+      # =========================================================================
+
+      
+      - uses: suisei-cn/actions-download-file@v1
+        id: EditTransactionSpec  # Remember to give an ID if you need the output filename
+        name: Edit Transaction Spec 
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/integration/edit-transaction.spec.js"
+          target: cypress/integration/     
+      # =========================================================================
+
+      
+      - uses: suisei-cn/actions-download-file@v1
+        id: FilterSpec  # Remember to give an ID if you need the output filename
+        name: Filter Spec 
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/integration/filters.spec.js"
+          target: cypress/integration/     
+      # =========================================================================
+
+
+      - uses: suisei-cn/actions-download-file@v1
+        id: HeaderSpec  # Remember to give an ID if you need the output filename
+        name: Header Spec 
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/integration/header.spec.js"
+          target: cypress/integration/     
+      # =========================================================================
+
+
+      - uses: suisei-cn/actions-download-file@v1
+        id: InsertTransactionSpec  # Remember to give an ID if you need the output filename
+        name: Insert Transaction Spec 
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/integration/insert-transaction.spec.js"
+          target: cypress/integration/     
+      # =========================================================================
+
+      - uses: suisei-cn/actions-download-file@v1
+        id: ModalInsertSpec  # Remember to give an ID if you need the output filename
+        name: Modal Insert Spec 
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/integration/modal-insert.spec.js"
+          target: cypress/integration/     
+      # =========================================================================
+
+      - uses: suisei-cn/actions-download-file@v1
+        id: OrderHeaderTableSpec  # Remember to give an ID if you need the output filename
+        name: Order Header Table Spec 
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/integration/order-header-table.spec.js"
+          target: cypress/integration/     
+      # =========================================================================
+
+      
+      - uses: suisei-cn/actions-download-file@v1
+        id: ResumeCalculateFiltersApplySpec  # Remember to give an ID if you need the output filename
+        name: Resume Calculate Filters Apply Spec 
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/integration/resume-calculate-filters-apply.spec+.js"
+          target: cypress/integration/     
+      # =========================================================================
+
+      
+      - uses: suisei-cn/actions-download-file@v1
+        id: ResumeCalculateInsertTransactionSpec  # Remember to give an ID if you need the output filename
+        name: Resume Calculate Insert Transaction Spec 
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/integration/resume-calculate-insert-transactions.spec.js"
+          target: cypress/integration/     
+      # =========================================================================
+
+      
+      - uses: suisei-cn/actions-download-file@v1
+        id: ResumeSpec  # Remember to give an ID if you need the output filename
+        name: Resume Spec 
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/integration/resume.spec.js"
+          target: cypress/integration/     
+      # =========================================================================
+
+      
+      - uses: suisei-cn/actions-download-file@v1
+        id: TableSpec  # Remember to give an ID if you need the output filename
+        name: Table Spec 
+        with:
+          url: "https://desafio-cubos.s3.us-west-002.backblazeb2.com/cypress/integration/table.spec.js"
+          target: cypress/integration/     
+      # =========================================================================
+
+      
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          build: npm run build
+          start: npm start
